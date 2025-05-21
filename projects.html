@@ -1,91 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projects</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Details</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f0f8ff;
-      margin: 0;
-      padding: 0;
+    :root {
+      --primary-color: #e3f2fd;
+      --accent-color: #2196f3;
+      --text-color: #0d47a1;
+      --bg-gradient: linear-gradient(135deg, #e3f2fd, #ffffff);
     }
 
-    header {
-      background-color: #1e90ff;
-      color: white;
-      padding: 20px;
-      text-align: center;
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-gradient);
+      color: var(--text-color);
+      scroll-behavior: smooth;
     }
+
     nav {
-      text-align: center;
-      margin-top: 1rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: #ffffffcc;
+      padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 999;
     }
 
     nav a {
-      margin: 0 1rem;
+      margin: 0 15px;
       text-decoration: none;
-      color: #1e90ff;
+      color: var(--text-color);
       font-weight: 600;
+      transition: color 0.3s;
     }
 
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      padding: 40px;
-      max-width: 1200px;
-      margin: auto;
+    nav a:hover {
+      color: var(--accent-color);
     }
 
-    .project-card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.05);
-      overflow: hidden;
-      text-decoration: none;
-      color: #333;
-      transition: transform 0.3s ease;
-      animation: fadeIn 1s ease-in;
+    header, section {
+      padding: 60px 20px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.85);
+      margin: 80px 20px 20px 20px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: transform 0.5s ease, opacity 0.5s ease;
     }
 
-    .project-card:hover {
-      transform: translateY(-5px);
+    section.visible, header.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
-    .project-card img {
-      width: auto;
-      height: auto;
-      object-fit: cover;
-    }
-
-    .project-card h3 {
-      padding: 15px;
-      margin: 0;
-      color: #1e90ff;
+    h1, h2, h3 {
+      color: var(--accent-color);
     }
 
     footer {
       text-align: center;
-      margin-top: 3rem;
-      padding: 1rem;
-      color: #888;
+      padding: 20px;
+      font-size: 0.9rem;
+      background: #e3f2fd;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .project-img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      margin: 20px 0;
     }
   </style>
 </head>
+
 <body>
-
-  <header>
-    <h1>Our Projects</h1>
-  </header>
-
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -94,23 +90,46 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <div class="project-grid">
-    <a href="project1.html" class="project-card">
-      <img src="assets/Student.png" alt="Stardust">
-      <h3>Stardust MYSQL Database</h3>
-    </a>
+  <header class="animated">
+    <h1>Project Title</h1>
+    <p>Detailed overview of the selected project and its scope.</p>
+  </header>
 
-    <a href="project2.html" class="project-card">
-      <img src="assets/project2-cover.jpg" alt="Project 2">
-      <h3>E-commerce Web Platform</h3>
-    </a>
+  <section class="animated">
+    <img src="assets/project-example.jpg" alt="Project Image" class="project-img">
+    <h2>Project Objective</h2>
+    <p>This project was aimed at solving XYZ problem using state-of-the-art techniques in ML/AI.</p>
+  </section>
 
-    <!-- Add more projects here by duplicating the pattern -->
-  </div>
+  <section class="animated">
+    <h2>Technologies Used</h2>
+    <p>Python, TensorFlow, FastAPI, PostgreSQL, Docker, AWS</p>
+  </section>
+
+  <section class="animated">
+    <h2>Outcomes & Results</h2>
+    <p>The solution achieved a 95% accuracy in real-time detection and was successfully deployed in a cloud-native environment.</p>
+  </section>
 
   <footer>
-    &copy; 2025 DSAI. All rights reserved.
+    &copy; 2025 Innovative Solutions. All rights reserved.
   </footer>
 
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('section, header').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
 </body>
+
 </html>
