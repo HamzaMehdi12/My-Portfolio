@@ -1,50 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Services</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - My Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f0f8ff;
+      color: #333;
+      animation: fadeIn 1s ease-in;
+    }
+
+    header {
+      background-color: #1e90ff;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #1e90ff;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      animation: slideIn 0.8s ease-in-out;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 1rem;
+      color: #888;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <div class="navbar">
-      <div class="logo">MyServices</div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="hamburger">
-          <span></span><span></span><span></span>
-        </div>
-      </nav>
-    </div>
+    <h1>Our Services</h1>
   </header>
 
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
   <section>
-    <h2>Our Services</h2>
-    <div class="service">
-      <h3>Web Development</h3>
-      <p>Responsive and scalable websites tailored to your business needs.</p>
-    </div>
-    <div class="service">
-      <h3>Mobile Apps</h3>
-      <p>Custom applications for iOS and Android platforms.</p>
-    </div>
-    <div class="service">
-      <h3>Consulting</h3>
-      <p>Expert advice on technology implementation and strategy.</p>
-    </div>
+    <h2>What We Offer</h2>
+    <ul>
+      <li>Web Design & Development</li>
+      <li>Mobile App Development</li>
+      <li>Digital Marketing Solutions</li>
+      <li>SEO Optimization</li>
+      <li>Data Analysis & Machine Learning</li>
+      <li>Cloud & DevOps Consulting</li>
+    </ul>
   </section>
 
   <footer>
-    <p>&copy; 2025 MyServices. All rights reserved.</p>
+    &copy; 2025 MyServices. All rights reserved.
   </footer>
-
-  <script src="js/script.js"></script>
 </body>
 </html>
