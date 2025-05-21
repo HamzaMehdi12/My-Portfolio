@@ -1,46 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us</title>
-  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header>
-    <div class="navbar">
-      <div class="logo">MyServices</div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="hamburger">
-          <span></span><span></span><span></span>
-        </div>
-      </nav>
-    </div>
-  </header>
+  <h1>Contact Us</h1>
+  <form action="https://formsubmit.co/smhamzamehdi97@gmail.com" method="POST">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
 
-  <main>
-    <h1>Contact Us</h1>
-    <form action="https://formsubmit.co/smhamzamehdi97@gmail.com" method="POST">
-      <input type="text" name="name" required placeholder="Your Name" />
-      <input type="email" name="email" required placeholder="Your Email" />
-      <textarea name="message" required placeholder="Your Message"></textarea>
-      <input type="hidden" name="_captcha" value="false" />
-      <input type="hidden" name="_next" value="https://your-vercel-site.vercel.app/thanks.html" />
-      <button type="submit">Send Message</button>
-    </form>
-  </main>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
 
-  <footer>
-    &copy; 2025 MyServices. All rights reserved.
-  </footer>
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="4" required></textarea><br><br>
 
-  <script src="js/script.js"></script>
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://your-vercel-site.vercel.app/thanks.html">
+
+    <button type="submit">Send</button>
+  </form>
 </body>
 </html>
