@@ -2,111 +2,135 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Services</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #f0f8ff;
       margin: 0;
-      padding: 0;
-      color: #333;
-    }
-
-    header {
-      background-color: #1e90ff;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      text-align: center;
-      margin-top: 1rem;
-    }
-
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #1e90ff;
-      font-weight: 600;
-    }
-
-    section {
-      max-width: 1000px;
-      margin: 50px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1s forwards;
-    }
-
-    h2 {
-      color: #1e90ff;
-      margin-top: 0;
-    }
-
-    .service-img {
-      width: 200px;
-      height: auto;
-      border-radius: 8px;
-      margin-bottom: 15px;
-    }
-
-    
-    footer {
-      text-align: center;
-      margin-top: 3rem;
-      padding: 1rem;
-      color: #888;
-    }
-
-    p {
-      font-size: 16px;
+      background: #f0f8ff; /* very light blue */
+      color: #222;
       line-height: 1.6;
     }
-
+    header, footer {
+      background: linear-gradient(90deg, #87cefa, #00bfff);
+      color: white;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0;
+      margin: 0.5rem 0 0 0;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #ffdd57;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto 4rem auto;
+      padding: 0 1.5rem;
+      animation: fadeInUp 0.8s ease forwards;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    section.service {
+      margin-bottom: 3rem;
+      border-radius: 12px;
+      background: white;
+      padding: 2rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+    section.service:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    h2.service-title {
+      color: #007acc;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    img.service-img {
+      max-width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
+    }
+    p.service-description {
+      font-size: 1.1rem;
+      color: #333;
+      margin-top: 0;
+    }
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
     @keyframes fadeInUp {
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      main {
+        margin: 1rem auto 3rem auto;
+      }
+      section.service {
+        padding: 1.5rem;
+      }
+    }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Our Services</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
-  
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-  </nav>
 
   <main>
-    <section>
-      <img src="assets/ml.png" alt="ML" class="service-img" />
-      <h2>Machine Learning</h2>
-      <p>
-        With a strong focus on Machine Learning, our team has successfully designed, trained, and deployed models ranging from foundational algorithms to advanced systems, all supported by robust MLOps practices.
+    <section class="service">
+      <img src="assets/ml.png" alt="Machine Learning" class="service-img" />
+      <h2 class="service-title">Machine Learning Solutions</h2>
+      <p class="service-description">
+        With a strong focus on Machine Learning, our team has successfully designed, trained, and deployed models 
+        ranging from foundational algorithms to advanced systems, all supported by robust MLOps practices.
       </p>
       <p>
-          Combining deep analytical insight with efficient coding expertise, we are committed to delivering high-impact solutions that drive real value for our clients. As the landscape of Artificial Intelligence continues to evolve, we remain at the forefront — equipped with top-tier talent and a passion for pushing the boundaries of modern technology.
+        Combining deep analytical insight with efficient coding expertise, we are committed to delivering high-impact 
+        solutions that drive real value for our clients. As the landscape of Artificial Intelligence continues to evolve, 
+        we remain at the forefront — equipped with top-tier talent and a passion for pushing the boundaries of 
+        modern technology.
       </p>
     </section>
 
-    <section>
-      <img src="assets/dl.png" alt="DL" class="service-img" />
-      <h2>Deep Learning</h2>
-      <p>
+    <section class="service">
+      <img src="assets/dl.png" alt="Deep Learning" class="service-img" />
+      <h2 class="service-title">Deep Learning & AI</h2>
+      <p class="service-description">
         Our expertise spans the full spectrum of modern AI and Deep Learning technologies, enabling us to craft intelligent, data-driven solutions tailored to real-world challenges.
         With hands-on experience in Neural Networks, Natural Language Processing (NLP), Convolutional Neural Networks (CNNs), 
         Recurrent Neural Networks (RNNs), Long Short-Term Memory networks (LSTMs), Object Detection techniques like YOLO and OGNET, 
@@ -118,22 +142,24 @@
       </p>
     </section>
 
-    <section>
-      <img src="assets/SQL.png" alt="Service 3" class="service-img" />
-      <h2>MYSQL RDBMS</h2>
-      <p>Our expertise extends deeply into relational database management systems (RDBMS), with a strong command of MySQL and all core SQL operations.</p>
-        <p>
-          From designing efficient database schemas to executing complex queries, our team is proficient in CRUD (Create, Read, Update, Delete) operations, 
+    <section class="service">
+      <img src="assets/SQL.png" alt="Databases" class="service-img" />
+      <h2 class="service-title">Database Design & Management</h2>
+      <p class="service-description">
+        Our expertise extends deeply into relational database management systems (RDBMS), with a strong command of MySQL and all core SQL operations.
+      </p>
+      <p>
+        From designing efficient database schemas to executing complex queries, our team is proficient in CRUD (Create, Read, Update, Delete) operations, 
           along with advanced DQL (Data Query Language), DDL (Data Definition Language), DCL (Data Control Language), and DML (Data Manipulation Language) 
           functionalities. Whether it’s structuring data, optimizing performance, or ensuring security, we build database solutions that are scalable, 
           secure, and aligned with your business goals.
-        </p>
+      </p>
     </section>
 
-    <section>
-      <img src="assets/fr.png" alt="FR" class="service-img" />
-      <h2>Feature Engineering</h2>
-      <p>
+    <section class="service">
+      <img src="assets/fr.png" alt="Feature Engineering" class="service-img" />
+      <h2 class="service-title">Feature Engineering</h2>
+      <p class="service-description">
         Feature engineering is at the core of our data science workflow, enabling us to transform raw data into meaningful representations that maximize model performance.
         Our team excels at identifying, creating, and refining features through advanced techniques such as feature extraction, selection, scaling, 
         encoding, dimensionality reduction, and interaction term generation. We leverage domain knowledge and statistical insights to 
@@ -143,10 +169,10 @@
       </p>
     </section>
 
-    <section>
-      <img src="assets/py.png" alt="PY" class="service-img" />
-      <h2>Python</h2>
-      <p>
+    <section class="service">
+      <img src="assets/py.png" alt="Python Programming" class="service-img" />
+      <h2 class="service-title">Python Programming & OOP</h2>
+      <p class="service-description">
         Python is central to our development workflow, empowering us to build robust, scalable, and intelligent systems across a wide range of applications.
         Our team possesses exceptionally strong programming skills, with deep expertise in both procedural and object-oriented programming (OOP) paradigms. 
         We apply solid design principles and write clean, modular, and reusable code for everything from quick automation scripts to complex enterprise solutions.
@@ -158,8 +184,7 @@
   </main>
 
   <footer>
-    &copy; 2025 DSAI. All rights reserved.
+    <p>&copy; 2025 DSAI. All rights reserved.</p>
   </footer>
-  
 </body>
 </html>
