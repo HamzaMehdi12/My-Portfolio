@@ -1,40 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Services - Home</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - My Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f0f8ff;
+      color: #333;
+      animation: fadeIn 1s ease-in;
+    }
+
+    header {
+      background-color: #1e90ff;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #1e90ff;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      animation: slideIn 0.8s ease-in-out;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 1rem;
+      color: #888;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <div class="navbar">
-      <div class="logo">MyServices</div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="hamburger">
-          <span></span><span></span><span></span>
-        </div>
-      </nav>
-    </div>
+    <h1>Welcome to My Services</h1>
   </header>
 
-  <section class="hero">
-    <h1>Welcome to My Professional Services</h1>
-    <p>We provide top-tier solutions tailored to your needs.</p>
-    <a href="services.html" class="btn">Explore Services</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section>
+    <h2>Your One-Stop Solution</h2>
+    <p>We offer professional and reliable services to cater to your business and personal needs. Explore our range of services, view our recent projects, or reach out to collaborate!</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 MyServices. All rights reserved.</p>
+    &copy; 2025 MyServices. All rights reserved.
   </footer>
-
-  <script src="js/script.js"></script>
 </body>
 </html>
