@@ -1,104 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services - My Services</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
   <style>
-    * {
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f8ff;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    body {
-      background-color: #f0f8ff;
       color: #333;
-      animation: fadeIn 1s ease-in;
     }
 
     header {
       background-color: #1e90ff;
       color: white;
-      padding: 1rem;
+      padding: 20px;
       text-align: center;
-    }
-
-    nav {
-      text-align: center;
-      margin-top: 1rem;
-    }
-
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #1e90ff;
-      font-weight: 600;
     }
 
     section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-      animation: slideIn 0.8s ease-in-out;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
     }
 
     h2 {
-      margin-bottom: 1rem;
+      color: #1e90ff;
+      margin-top: 0;
     }
 
-    ul {
-      margin-left: 1.5rem;
+    .service-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 16px;
       line-height: 1.6;
     }
 
-    footer {
-      text-align: center;
-      margin-top: 3rem;
-      padding: 1rem;
-      color: #888;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes slideIn {
-      from { transform: translateY(30px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Our Services</h1>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <main>
+    <section>
+      <img src="assets/service1.jpg" alt="Service 1" class="service-img" />
+      <h2>Web Development</h2>
+      <p>
+        We provide modern, responsive, and fully functional websites using the latest web technologies. From landing pages to full-stack applications, we deliver professional results.
+      </p>
+    </section>
 
-  <section>
-    <h2>What We Offer</h2>
-    <ul>
-      <li>Web Design & Development</li>
-      <li>Mobile App Development</li>
-      <li>Digital Marketing Solutions</li>
-      <li>SEO Optimization</li>
-      <li>Data Analysis & Machine Learning</li>
-      <li>Cloud & DevOps Consulting</li>
-    </ul>
-  </section>
+    <section>
+      <img src="assets/service2.jpg" alt="Service 2" class="service-img" />
+      <h2>Mobile App Development</h2>
+      <p>
+        Our team builds robust Android and iOS applications with seamless UX and optimized performance tailored for your business needs.
+      </p>
+    </section>
+
+    <section>
+      <img src="assets/service3.jpg" alt="Service 3" class="service-img" />
+      <h2>Digital Marketing</h2>
+      <p>
+        We help your brand grow online through SEO, content marketing, social media campaigns, and PPC strategies to maximize your reach and ROI.
+      </p>
+    </section>
+
+    <section>
+      <img src="assets/service4.jpg" alt="Service 4" class="service-img" />
+      <h2>UI/UX Design</h2>
+      <p>
+        Our designers craft intuitive and engaging interfaces that enhance user satisfaction and usability across digital platforms.
+      </p>
+    </section>
+
+    <section>
+      <img src="assets/service5.jpg" alt="Service 5" class="service-img" />
+      <h2>Cloud Deployment</h2>
+      <p>
+        We offer seamless deployment, scaling, and maintenance solutions on AWS, Azure, and Vercel for high availability and performance.
+      </p>
+    </section>
+  </main>
 
   <footer>
     &copy; 2025 MyServices. All rights reserved.
   </footer>
+  
 </body>
 </html>
