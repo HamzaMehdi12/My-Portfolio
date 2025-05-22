@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Service Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -14,106 +14,109 @@
     }
 
     body {
-      background-color: #f0f8ff;
+      background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
       color: #333;
-      animation: fadeIn 1s ease-in;
-    }
-
-    header {
-      background-color: #1e90ff;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    nav {
-      text-align: center;
-      margin-top: 1rem;
-    }
-
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #1e90ff;
-      font-weight: 600;
+      overflow-x: hidden;
     }
 
     section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-      animation: slideIn 0.8s ease-in-out;
+      padding: 80px 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.8s ease;
+      animation: fadeInSlide 1s ease-in-out both;
     }
 
-    h2 {
-      margin-bottom: 1rem;
+    @keyframes fadeInSlide {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    header {
+      background: #03a9f4;
+      color: white;
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+
+    .section:nth-child(even) {
+      background: linear-gradient(135deg, #f1f8e9, #e0f7fa);
     }
 
     footer {
-      text-align: center;
-      margin-top: 3rem;
-      padding: 1rem;
-      color: #888;
-    }
-    
-    button {
-      margin-top: 1.5rem;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      background-color: #1e90ff;
+      background: #0288d1;
       color: white;
-      font-weight: 600;
-      cursor: pointer;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
+      text-align: center;
+      padding: 30px;
     }
 
-    button:hover {
-      background-color: #0f78d1;
+    .content-box {
+      background: white;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      max-width: 800px;
+      width: 90%;
+      animation: fadeInSlide 1.2s ease-in-out;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes slideIn {
-      from { transform: translateY(30px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
+    @media (max-width: 768px) {
+      .content-box {
+        padding: 20px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Welcome to DataSolutions AI</h1>
+    <h1>Welcome to DataSolution AI</h1>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <section class="section">
+    <div class="content-box">
+      <h2>About Us</h2>
+      <p>We offer state-of-the-art solutions in Machine Learning, AI, Databases, and more. Our goal is to deliver innovative and robust digital solutions.</p>
+    </div>
+  </section>
 
-  <section>
-    <h2>Your One-Stop Solution</h2>
-    <p><strong>We offer state-of-the-art solutions tailored to your needs.</strong></p>
-  </br>
-    <p>With a strong foundation in Machine Learning, Deep Learning, and Databases, we deliver robust and innovative systems 
-      that serve as building blocks for quality, reliability, and future-ready technology. 
-      Our solutions are not only scalable and effective, but also engineered to perform and adapt in real-world scenarios.</p>
-  </br>    
-    <p>Interested in collaborating on a project? Contact us — we’d love to hear from you!</p>
-    <form action = "contact.html">
-      <button type="submit">Contact Us </button>
-    </form>
+  <section class="section">
+    <div class="content-box">
+      <h2>Services</h2>
+      <p>Explore our services in AI, Deep Learning, Feature Engineering, Full Stack Development, and more.</p>
+    </div>
+  </section>
 
-    
+  <section class="section">
+    <div class="content-box">
+      <h2>Projects</h2>
+      <p>Discover our impactful projects with interactive demos and deep-dives into technology use.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="content-box">
+      <h2>Contact Us</h2>
+      <p>Reach out to us for collaboration or inquiries. We're ready to work with you!</p>
+    </div>
   </section>
 
   <footer>
-    &copy; 2025 DSAI. All rights reserved.
+    <p>&copy; 2025 DSAI. All rights reserved.</p>
   </footer>
 </body>
 </html>
