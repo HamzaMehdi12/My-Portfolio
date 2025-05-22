@@ -1,3 +1,4 @@
+/* css/styles.css */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -95,7 +96,6 @@ button:hover {
   font-weight: bold;
   color: green;
 }
-
 footer {
       background: #0288d1;
       color: white;
