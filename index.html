@@ -3,116 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Service Website</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    body {
-      background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
-      color: #333;
-      overflow-x: hidden;
-    }
-
-    section {
-      padding: 80px 20px;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.8s ease;
-      animation: fadeInSlide 1s ease-in-out both;
-    }
-
-    @keyframes fadeInSlide {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    header {
-      background: #03a9f4;
-      color: white;
-      padding: 20px;
-      width: 100%;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-
-    h1, h2 {
-      margin-bottom: 20px;
-    }
-
-    .section:nth-child(even) {
-      background: linear-gradient(135deg, #f1f8e9, #e0f7fa);
-    }
-
-    footer {
-      background: #0288d1;
-      color: white;
-      text-align: center;
-      padding: 30px;
-    }
-
-    .content-box {
-      background: white;
-      border-radius: 12px;
-      padding: 40px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-      max-width: 800px;
-      width: 90%;
-      animation: fadeInSlide 1.2s ease-in-out;
-    }
-
-    @media (max-width: 768px) {
-      .content-box {
-        padding: 20px;
-      }
-    }
-  </style>
+  <title>Technical Writer & AI Researcher</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/main.js" defer></script>
 </head>
 <body>
+  <nav>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects/index.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
   <header>
-    <h1>Welcome to DataSolution AI</h1>
+    <h1>I’m a Technical Writer and AI Researcher</h1>
+    <p>I specialize in creating clear, concise technical content and advancing research in artificial intelligence.</p>
+    <a class="button" href="about.html">Read More</a>
   </header>
 
-  <section class="section">
-    <div class="content-box">
-      <h2>About Us</h2>
-      <p>We offer state-of-the-art solutions in Machine Learning, AI, Databases, and more. Our goal is to deliver innovative and robust digital solutions.</p>
-    </div>
+  <section class="about-preview">
+    <h2>About Me</h2>
+    <p>With a passion for both writing and AI. I bridge the gap between complex concepts and practical applications.</p>
+    <a href="about.html">Learn More</a>
   </section>
 
-  <section class="section">
-    <div class="content-box">
-      <h2>Services</h2>
-      <p>Explore our services in AI, Deep Learning, Feature Engineering, Full Stack Development, and more.</p>
+  <section class="services-preview">
+    <h2>Services</h2>
+    <div class="services">
+      <div class="service">
+        <h3>Technical Writing</h3>
+        <p>Crafting precise and informative technical documents.</p>
+      </div>
+      <div class="service">
+        <h3>Machine Learning</h3>
+        <p>Developing and implementing machine learning algorithms.</p>
+      </div>
+      <div class="service">
+        <h3>Deep Learning</h3>
+        <p>Exploring advanced neural networks and deep learning models.</p>
+      </div>
     </div>
+    <a href="services.html">See All Services</a>
   </section>
 
-  <section class="section">
-    <div class="content-box">
-      <h2>Projects</h2>
-      <p>Discover our impactful projects with interactive demos and deep-dives into technology use.</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="content-box">
-      <h2>Contact Us</h2>
-      <p>Reach out to us for collaboration or inquiries. We're ready to work with you!</p>
-    </div>
+  <section class="contact-preview">
+    <h2>Contact</h2>
+    <a href="contact.html">Get in Touch</a>
   </section>
 
   <footer>
