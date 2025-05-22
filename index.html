@@ -1,11 +1,109 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Portfolio</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Technical Writer & AI Researcher</title>
+  <style>
+    :root {
+      --primary: #0a84ff;
+      --bg: linear-gradient(to bottom right, #d1f3ff, #a8e0f5);
+      --card-bg: rgba(255, 255, 255, 0.8);
+      --shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: #1f1f1f;
+      line-height: 1.6;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      background: transparent;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 2rem auto;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 15px;
+      width: 250px;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -25,7 +123,7 @@
 
   <section>
     <h2>About Me</h2>
-    <p style="text-align: center; max-width: 800px; margin: auto;">With a passion for both writing and AI, I bridge the gap between complex concepts and practical applications.</p>
+    <p style="max-width: 700px; margin: auto;">With a passion for both writing and AI, I bridge the gap between complex concepts and practical applications.</p>
   </section>
 
   <section>
@@ -44,22 +142,17 @@
         <p>Exploring advanced neural networks and deep learning models.</p>
       </div>
     </div>
-    <div style="text-align: center; margin-top: 1.5rem;">
-      <a href="services.html" class="button">See More Services</a>
-    </div>
+    <br>
+    <a href="services.html" class="button">See More Services</a>
   </section>
 
   <section>
     <h2>Contact</h2>
-    <div style="text-align: center;">
-      <a href="contact.html" class="button">Get in Touch</a>
-    </div>
+    <a href="contact.html" class="button">Get in Touch</a>
   </section>
 
-  <script src="js/main.js"></script>
-  
   <footer>
-    <p>&copy; 2025 DSAI. All rights reserved.</p>
+    &copy; 2025 Technical Writer & AI Researcher
   </footer>
 </body>
 </html>
