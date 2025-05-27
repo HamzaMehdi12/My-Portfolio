@@ -6,6 +6,39 @@ body {
   padding: 0;
   color: #123;
 }
+.about-container {
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.skills-list {
+  list-style: disc inside;
+  margin-left: 1rem;
+  font-size: 1.05rem;
+}
+
+.cta-section {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.cta-section a {
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.cta-section a:hover {
+  text-decoration: underline;
+}
+
 
 header nav ul {
   display: flex;
