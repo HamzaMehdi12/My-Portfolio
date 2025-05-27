@@ -227,11 +227,13 @@ nav a.active::after {
 }
 
 .about-section {
+  padding: 10px;
   max-width: 700px;
   margin: 0 auto;
 }
 
 .about-section p {
+  padding: 10px;
   font-size: 1.1rem;
   line-height: 1.7;
   margin-bottom: 1.5rem;
