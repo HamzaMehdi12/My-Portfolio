@@ -57,7 +57,35 @@ header nav a {
   flex-wrap: wrap;
   gap: 1.5rem;
 }
+.thanks-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  text-align: center;
+}
 
+.thanks-message h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.thanks-message p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.button {
+  padding: 10px 20px;
+  background: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background: #0056b3;
+}
 .card {
   background-color: #ffffffcc;
   padding: 1rem;
