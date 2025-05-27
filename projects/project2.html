@@ -19,9 +19,17 @@
   </nav>
 
   <main class="project-detail">
-    <h1>Project 2 Title</h1>
-    <img src="../assets/project2.png" alt="Project 2 Preview" class="project-image" />
-    <p>This is a detailed description of Project 2. Explain what the project does, technologies used, and any results.</p>
+    <h1>Earthquake PredictionRF Model</h1>
+    <img src="../assets/Predicted_Earthquake_Probability_vs_Actual_Events.png" alt="Project 2 Preview" class="project-image" />
+    <p>The model demonstrates exceptional performance with 100% precision, recall, F1-score, and AUC metrics, suggesting perfect class separation—potentially indicating an idealized synthetic 
+      dataset, overfitting, or feature leakage (e.g., lag features inadvertently revealing future events). Robust preprocessing includes temporal feature extraction (hour, day, month), 
+      daily seismic metric aggregation, and lag features (1, 7, 14 days), though it lacks spatial analysis for location-specific predictions.</p> 
+    <img src="../assets/Daily_Earthquake_Occurance.png" alt="Project 2 Daily" class="project-image" />
+    <p>Interpretability is enhanced through visualizations like PCA projections, predicted vs. actual probabilities, and feature importance rankings (highlighting lagged occurrences, depth, 
+      and magnitude as key predictors). However, limitations include uncalibrated confidence scores, binary classification (no magnitude/location output), and potential data leakage risks. 
+      Future improvements should incorporate geospatial features, probability calibration, and rigorous out-of-sample validation to ensure real-world applicability.</p>
+    <img src="../assets/Feature_Importance.png" alt="Project 2 Feature" class="project-image" />
+    <img src="../assets/PCA.png" alt="Project 2 PCA" class="project-image" />
     <a href="index.html" class="btn">Back to Projects</a>
   </main>
 
