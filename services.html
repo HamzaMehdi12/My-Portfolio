@@ -1,190 +1,35 @@
+<!-- File: services.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Our Services</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background: #f0f8ff; /* very light blue */
-      color: #222;
-      line-height: 1.6;
-    }
-    header, footer {
-      background: linear-gradient(90deg, #87cefa, #00bfff);
-      color: white;
-      padding: 1.5rem 2rem;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 0;
-      margin: 0.5rem 0 0 0;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-    nav ul li a:hover {
-      color: #ffdd57;
-    }
-    main {
-      max-width: 900px;
-      margin: 2rem auto 4rem auto;
-      padding: 0 1.5rem;
-      animation: fadeInUp 0.8s ease forwards;
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    section.service {
-      margin-bottom: 3rem;
-      border-radius: 12px;
-      background: white;
-      padding: 2rem;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease;
-      cursor: default;
-    }
-    section.service:hover {
-      transform: scale(1.03);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    }
-    h2.service-title {
-      color: #007acc;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-    img.service-img {
-      max-width: 100%;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin-bottom: 1rem;
-    }
-    p.service-description {
-      font-size: 1.1rem;
-      color: #333;
-      margin-top: 0;
-    }
-    footer p {
-      margin: 0;
-      font-size: 0.9rem;
-    }
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    @media (max-width: 600px) {
-      nav ul {
-        flex-direction: column;
-        gap: 1rem;
-      }
-      main {
-        margin: 1rem auto 3rem auto;
-      }
-      section.service {
-        padding: 1.5rem;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header>
-    <h1>Our Services</h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
+        <li><a href="projects/index.html">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
-
-  <main>
-    <section class="service">
-      <img src="assets/ml.png" alt="Machine Learning" class="service-img" />
-      <h2 class="service-title">Machine Learning Solutions</h2>
-      <p class="service-description">
-        With a strong focus on Machine Learning, our team has successfully designed, trained, and deployed models 
-        ranging from foundational algorithms to advanced systems, all supported by robust MLOps practices.
-      </p>
-      <p>
-        Combining deep analytical insight with efficient coding expertise, we are committed to delivering high-impact 
-        solutions that drive real value for our clients. As the landscape of Artificial Intelligence continues to evolve, 
-        we remain at the forefront — equipped with top-tier talent and a passion for pushing the boundaries of 
-        modern technology.
-      </p>
-    </section>
-
-    <section class="service">
-      <img src="assets/dl.png" alt="Deep Learning" class="service-img" />
-      <h2 class="service-title">Deep Learning & AI</h2>
-      <p class="service-description">
-        Our expertise spans the full spectrum of modern AI and Deep Learning technologies, enabling us to craft intelligent, data-driven solutions tailored to real-world challenges.
-        With hands-on experience in Neural Networks, Natural Language Processing (NLP), Convolutional Neural Networks (CNNs), 
-        Recurrent Neural Networks (RNNs), Long Short-Term Memory networks (LSTMs), Object Detection techniques like YOLO and OGNET, 
-        as well as in designing and optimizing advanced algorithms, our team delivers state-of-the-art applications 
-        that are both scalable and efficient
-      </p>
-      <p>
-        Driven by innovation and powered by skill, we strive to stay ahead of the curve in today’s rapidly evolving AI landscape.
-      </p>
-    </section>
-
-    <section class="service">
-      <img src="assets/SQL.png" alt="Databases" class="service-img" />
-      <h2 class="service-title">Database Design & Management</h2>
-      <p class="service-description">
-        Our expertise extends deeply into relational database management systems (RDBMS), with a strong command of MySQL and all core SQL operations.
-      </p>
-      <p>
-        From designing efficient database schemas to executing complex queries, our team is proficient in CRUD (Create, Read, Update, Delete) operations, 
-          along with advanced DQL (Data Query Language), DDL (Data Definition Language), DCL (Data Control Language), and DML (Data Manipulation Language) 
-          functionalities. Whether it’s structuring data, optimizing performance, or ensuring security, we build database solutions that are scalable, 
-          secure, and aligned with your business goals.
-      </p>
-    </section>
-
-    <section class="service">
-      <img src="assets/fr.png" alt="Feature Engineering" class="service-img" />
-      <h2 class="service-title">Feature Engineering</h2>
-      <p class="service-description">
-        Feature engineering is at the core of our data science workflow, enabling us to transform raw data into meaningful representations that maximize model performance.
-        Our team excels at identifying, creating, and refining features through advanced techniques such as feature extraction, selection, scaling, 
-        encoding, dimensionality reduction, and interaction term generation. We leverage domain knowledge and statistical insights to 
-        engineer features that enhance model accuracy and generalization. Whether working with structured tabular data, time series, 
-        or unstructured formats like text and images, our approach to feature engineering ensures your machine learning models are both powerful 
-        and interpretable.
-      </p>
-    </section>
-
-    <section class="service">
-      <img src="assets/py.png" alt="Python Programming" class="service-img" />
-      <h2 class="service-title">Python Programming & OOP</h2>
-      <p class="service-description">
-        Python is central to our development workflow, empowering us to build robust, scalable, and intelligent systems across a wide range of applications.
-        Our team possesses exceptionally strong programming skills, with deep expertise in both procedural and object-oriented programming (OOP) paradigms. 
-        We apply solid design principles and write clean, modular, and reusable code for everything from quick automation scripts to complex enterprise solutions.
-        We are proficient in a variety of Python frameworks and libraries including NumPy, Pandas, Scikit-learn, TensorFlow, PyTorch, Flask, FastAPI, and more. 
-        Our skillset also spans version control (Git), REST API development, unit testing, debugging, and integration of third-party services. Whether it’s developing 
-        machine learning pipelines, deploying APIs, or architecting scalable backend systems, we consistently follow best practices to deliver reliable and production-ready code.
-      </p>
-    </section>
-  </main>
-
+  <section class="services">
+    <h1>Services</h1>
+    <div class="service-cards">
+      <div class="card"><img src="assets/tech-writing.png" alt="Technical Writing" /><h3>Technical Writing</h3><p>Crafting precise and informative technical documents.</p></div>
+      <div class="card"><img src="assets/machine-learning.png" alt="Machine Learning" /><h3>Machine Learning</h3><p>Developing and implementing ML algorithms.</p></div>
+      <div class="card"><img src="assets/deep-learning.png" alt="Deep Learning" /><h3>Deep Learning</h3><p>Exploring advanced deep learning models.</p></div>
+      <div class="card"><img src="assets/data-analysis.png" alt="Data Analysis" /><h3>Data Analysis</h3><p>Interpreting data to uncover trends and insights.</p></div>
+      <div class="card"><img src="assets/research.png" alt="Research" /><h3>AI Research</h3><p>Publishing and contributing to academic research.</p></div>
+    </div>
+  </section>
   <footer>
-    <p>&copy; 2025 DSAI. All rights reserved.</p>
+    <p>&copy; DSAI All Rights Reserved</p>
   </footer>
 </body>
 </html>
