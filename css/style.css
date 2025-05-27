@@ -1,104 +1,109 @@
-/* css/styles.css */
+/* style.css */
 body {
   font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom right, #c2f0ff, #b6e0f9);
   margin: 0;
   padding: 0;
-  background: #e0f7fa;
-  color: #333;
+  color: #123;
 }
 
-nav {
-  background: #00bcd4;
-  padding: 1rem;
-}
-
-nav ul {
-  list-style: none;
+header nav ul {
   display: flex;
+  list-style: none;
+  background-color: #ffffffa0;
+  padding: 1rem;
   justify-content: center;
   gap: 2rem;
-  padding: 0;
   margin: 0;
 }
 
-nav ul li a {
-  color: white;
+header nav a {
   text-decoration: none;
+  color: #123;
   font-weight: bold;
 }
 
-header, section {
-  padding: 2rem;
+.hero, .about-summary, .services-preview, .cta, .services, .contact, .projects {
   text-align: center;
+  padding: 2rem;
 }
 
-.button, a.button {
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
   display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: #03a9f4;
+  background-color: #3dbfff;
   color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
   text-decoration: none;
-  border-radius: 5px;
+  margin-top: 1rem;
 }
 
-.services, .projects {
+.about-summary, .services-preview {
+  background-color: #ffffff88;
+  margin: 2rem auto;
+  border-radius: 20px;
+  max-width: 800px;
+  padding: 1.5rem;
+}
+
+.service-cards, .project-cards {
   display: flex;
   justify-content: center;
-  gap: 2rem;
   flex-wrap: wrap;
-  margin-top: 2rem;
+  gap: 1.5rem;
 }
 
-.service, .project {
-  background: white;
+.card {
+  background-color: #ffffffcc;
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 20px;
   width: 250px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.project img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+.card img {
+  max-width: 100%;
+  height: 140px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 1rem;
 }
 
-form {
+.contact form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 400px;
-  margin: auto;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-input, textarea {
-  padding: 0.5rem;
+.contact input, .contact textarea {
+  padding: 0.75rem;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
-button {
-  padding: 0.5rem 1rem;
-  background-color: #009688;
+.contact button {
+  background-color: #3dbfff;
   color: white;
   border: none;
-  border-radius: 5px;
+  padding: 0.8rem;
+  border-radius: 8px;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #00796b;
-}
-
-#form-status {
-  margin-top: 1rem;
-  text-align: center;
-  font-weight: bold;
-  color: green;
-}
-footer {
-      background: #0288d1;
-      color: white;
-      text-align: center;
-      padding: 30px;
+@media (max-width: 768px) {
+  .service-cards, .project-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav ul {
+    flex-direction: column;
+  }
 }
