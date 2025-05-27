@@ -224,12 +224,19 @@ nav a.active::after {
   background-color: var(--light);
   border-radius: 20px;
   box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+
+.about-section {
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .about-section p {
   font-size: 1.1rem;
   line-height: 1.7;
   margin-bottom: 1.5rem;
+  text-align: center;
   animation: fadeIn 1s ease;
 }
 
@@ -239,6 +246,7 @@ nav a.active::after {
   flex-wrap: wrap;
   gap: 0.8rem;
   margin: 1.5rem 0;
+  justify-content: center;
 }
 
 .skills-list li {
@@ -256,6 +264,11 @@ nav a.active::after {
   background: var(--primary);
   color: white;
   transform: translateY(-2px);
+}
+
+.about-contact-btn {
+  display: inline-block;
+  margin-top: 2rem;
 }
 
 /* ===== Cards ===== */
@@ -278,7 +291,7 @@ nav a.active::after {
 
 .card img {
   max-width: 100%;
-  height: 160px;
+  height: 140px; /* Reduced image size */
   object-fit: contain;
   border-radius: 10px;
   margin-bottom: 1.5rem;
@@ -463,7 +476,7 @@ nav a.active::after {
 
 .project-image {
   width: 100%;
-  height: 400px;
+  height: 250px; /* Reduced image size */
   object-fit: cover;
   border-radius: 15px;
   margin-bottom: 2rem;
@@ -519,14 +532,14 @@ nav a.active::after {
 
 .project-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Smaller columns */
   gap: 1.5rem;
   margin: 2rem 0;
 }
 
 .project-gallery img {
   width: 100%;
-  height: 200px;
+  height: 180px; /* Smaller gallery images */
   object-fit: cover;
   border-radius: 10px;
   transition: transform 0.3s ease;
@@ -542,6 +555,7 @@ nav a.active::after {
   gap: 1rem;
   margin-top: 2rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* ===== Thank You Page ===== */
@@ -627,7 +641,7 @@ footer {
   }
   
   .project-image {
-    height: 300px;
+    height: 200px;
   }
 }
 
@@ -648,5 +662,13 @@ footer {
   
   .project-links {
     justify-content: center;
+  }
+  
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-gallery img {
+    height: 150px;
   }
 }
