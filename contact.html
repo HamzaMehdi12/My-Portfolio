@@ -1,135 +1,34 @@
+<!-- File: contact.html -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project Details</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary-color: #e3f2fd;
-      --accent-color: #2196f3;
-      --text-color: #0d47a1;
-      --bg-gradient: linear-gradient(135deg, #e3f2fd, #ffffff);
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg-gradient);
-      color: var(--text-color);
-      scroll-behavior: smooth;
-    }
-
-    nav {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      background: #ffffffcc;
-      padding: 10px 0;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      z-index: 999;
-    }
-
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: var(--text-color);
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: var(--accent-color);
-    }
-
-    header, section {
-      padding: 60px 20px;
-      text-align: center;
-      background: rgba(255, 255, 255, 0.85);
-      margin: 80px 20px 20px 20px;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-      opacity: 0;
-      transform: translateY(40px);
-      transition: transform 0.5s ease, opacity 0.5s ease;
-    }
-
-    section.visible, header.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    h1, h2, h3 {
-      color: var(--accent-color);
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      background: #e3f2fd;
-    }
-
-    .project-img {
-      max-width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-      margin: 20px 0;
-    }
-  </style>
+  <title>Contact</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <header class="animated">
-    <h1>Project Title</h1>
-    <p>Detailed overview of the selected project and its scope.</p>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects/index.html">Projects</a></li>
+      </ul>
+    </nav>
   </header>
-
-  <section class="animated">
-    <img src="assets/project-example.jpg" alt="Project Image" class="project-img">
-    <h2>Project Objective</h2>
-    <p>This project was aimed at solving XYZ problem using state-of-the-art techniques in ML/AI.</p>
+  <section class="contact">
+    <h1>Contact Me</h1>
+    <form action="https://formspree.io/f/yourformid" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
-
-  <section class="animated">
-    <h2>Technologies Used</h2>
-    <p>Python, TensorFlow, FastAPI, PostgreSQL, Docker, AWS</p>
-  </section>
-
-  <section class="animated">
-    <h2>Outcomes & Results</h2>
-    <p>The solution achieved a 95% accuracy in real-time detection and was successfully deployed in a cloud-native environment.</p>
-  </section>
-
   <footer>
-    &copy; 2025 Innovative Solutions. All rights reserved.
+    <p>&copy; DSAI All Rights Reserved</p>
   </footer>
-
-  <script>
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
-
-    document.querySelectorAll('section, header').forEach(section => {
-      observer.observe(section);
-    });
-  </script>
 </body>
-
 </html>
