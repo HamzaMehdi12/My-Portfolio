@@ -18,16 +18,23 @@
       </ul>
     </nav>
   </header>
-  <section class="contact">
+
+  <main class="container">
     <h1>Contact Me</h1>
-    <form action="https://formspree.io/f/xvganppe" method="POST">
+    <p>Fill out the form below and I'll get back to you as soon as possible.</p>
+
+    <form action="https://formspree.io/f/xvganppe" method="POST" class="contact-form">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <input type="hidden" name="_redirect" value="thanks.html" />
+      <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+      <input type="hidden" name="_redirect" value="thanks.html">
       <button type="submit">Send Message</button>
     </form>
-  </section>
+  </main>
+
+
+
+  
   <script src="../js/script.js"></script>
   <footer>
     <p>&copy; DSAI. All Rights Reserved</p>
