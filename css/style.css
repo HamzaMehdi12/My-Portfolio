@@ -307,13 +307,81 @@ nav a.active::after {
   margin-top: 2rem;
 }
 
-/* ===== Contact Form ===== */
+/* ===== Enhanced Contact Form ===== */
+.contact {
+  background-color: var(--light);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow-sm);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.contact-info h3 {
+  color: var(--primary-dark);
+  margin-bottom: 1.5rem;
+}
+
+.contact-details {
+  margin-bottom: 2rem;
+}
+
+.contact-details p {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.contact-details i {
+  color: var(--primary);
+  font-size: 1.2rem;
+  width: 24px;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(61, 191, 255, 0.1);
+  color: var(--primary-dark);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-3px);
+}
+
 .contact form {
+  flex: 1;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-  max-width: 500px;
-  margin: 0 auto;
 }
 
 .contact input, 
@@ -323,7 +391,7 @@ nav a.active::after {
   border-radius: 10px;
   font-family: 'Poppins', sans-serif;
   transition: all 0.3s ease;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .contact input:focus, 
@@ -331,6 +399,11 @@ nav a.active::after {
   outline: none;
   border-color: var(--primary);
   box-shadow: 0 0 0 3px rgba(61, 191, 255, 0.2);
+}
+
+.contact textarea {
+  min-height: 150px;
+  resize: vertical;
 }
 
 .contact button {
@@ -342,11 +415,133 @@ nav a.active::after {
   cursor: pointer;
   font-weight: 600;
   transition: all 0.3s ease;
+  margin-top: 0.5rem;
 }
 
 .contact button:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
+}
+
+/* ===== Project Pages ===== */
+.project-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--light);
+  border-radius: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.project-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.project-header h1 {
+  margin-bottom: 1rem;
+}
+
+.project-meta {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.project-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-light);
+}
+
+.project-meta-item i {
+  color: var(--primary);
+}
+
+.project-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-md);
+}
+
+.project-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.project-section {
+  margin-bottom: 2rem;
+}
+
+.project-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-dark);
+}
+
+.project-section p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.project-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.project-feature {
+  background: rgba(61, 191, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(61, 191, 255, 0.1);
+}
+
+.project-feature h3 {
+  color: var(--primary-dark);
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project-feature i {
+  color: var(--primary);
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.project-gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.project-gallery img:hover {
+  transform: scale(1.03);
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
 /* ===== Thank You Page ===== */
@@ -426,6 +621,14 @@ footer {
   .hero {
     padding: 6rem 1rem 3rem;
   }
+  
+  .contact-container {
+    flex-direction: column;
+  }
+  
+  .project-image {
+    height: 300px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -435,5 +638,15 @@ footer {
   
   .btn {
     width: 100%;
+  }
+  
+  .project-meta {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .project-links {
+    justify-content: center;
   }
 }
