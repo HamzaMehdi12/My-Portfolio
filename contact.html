@@ -20,10 +20,11 @@
   </header>
   <section class="contact">
     <h1>Contact Me</h1>
-    <form action="https://formspree.io/f/xvganppe" method="POST" onsubmit="window.location='thanks.html'; return false;">
+    <form action="https://formspree.io/f/xvganppe" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" placeholder="Your Message" required></textarea>
+      <input type="hidden" name="_redirect" value="thanks.html" />
       <button type="submit">Send Message</button>
     </form>
   </section>
