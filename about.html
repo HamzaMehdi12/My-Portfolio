@@ -1,4 +1,3 @@
-<!-- File: about.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,22 +8,51 @@
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
+    <nav class="navbar">
+      <ul class="nav-list">
         <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="projects/index.html">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <section class="content">
-    <h1>About Me</h1>
-    <p>I am a Technical Writer and AI Researcher with expertise in communicating complex topics clearly. My work spans across developing educational resources, writing technical documentation, and contributing to AI research projects.</p>
-  </section>
-  <script src="../js/script.js"></script>
+
+  <main class="container about-container">
+    <section class="about-section">
+      <h1>About Me</h1>
+      <p>
+        Hello! I’m [Your Name], a passionate and detail-oriented individual working in the field of [Your Domain, e.g., Data Science, AI, Web Development, etc.].
+      </p>
+      <p>
+        I specialize in building intelligent systems, designing modern web applications, and creating user-centric solutions that solve real-world problems.
+      </p>
+      <p>
+        With a strong background in [Your Skill Area], I enjoy combining technical expertise with creativity to deliver impactful projects.
+      </p>
+    </section>
+
+    <section class="skills-section">
+      <h2>Core Skills</h2>
+      <ul class="skills-list">
+        <li>Python / JavaScript / HTML / CSS</li>
+        <li>Machine Learning / Deep Learning</li>
+        <li>Web Development (FastAPI, Flask, React)</li>
+        <li>Docker / Git / CI-CD</li>
+        <li>Data Analysis / Visualization</li>
+      </ul>
+    </section>
+
+    <section class="cta-section">
+      <p>Want to collaborate or learn more? <a href="contact.html">Get in touch</a>.</p>
+    </section>
+  </main>
+
   <footer>
-    <p>&copy; DSAI. All Rights Reserved</p>
+    <p>&copy; 2025 DSAI. All Rights Reserved</p>
   </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
