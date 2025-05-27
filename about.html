@@ -1,118 +1,26 @@
+<!-- File: about.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    body {
-      background-color: #f0f8ff;
-      color: #333;
-      animation: fadeIn 1s ease-in;
-    }
-    button {
-      margin-top: 1.5rem;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      background-color: #1e90ff;
-      color: white;
-      font-weight: 600;
-      cursor: pointer;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #0f78d1;
-    }
-
-    header {
-      background-color: #1e90ff;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    nav {
-      text-align: center;
-      margin-top: 1rem;
-    }
-
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #1e90ff;
-      font-weight: 600;
-    }
-
-    section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-      animation: slideIn 0.8s ease-in-out;
-    }
-
-    h2 {
-      margin-bottom: 1rem;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 3rem;
-      padding: 1rem;
-      color: #888;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes slideIn {
-      from { transform: translateY(30px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>About Us</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects/index.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <section>
-    <h2>Who We Are</h2>
-    <p>We are a dedicated team of professionals offering a comprehensive range of services designed to empower businesses and individuals alike.
-      With notable experience and a strong commitment to quality, we specialize in cutting-edge technologies including Machine Learning, 
-      Deep Learning, Artificial Intelligence, Databases, Feature Engineering, and more. 
-      Our solutions are crafted to be both innovative and reliable — helping you build smarter systems, uncover actionable insights, 
-      and stay ahead in a rapidly evolving digital landscape.</p>
-  </br>
-
-    <p>Like to discuss a project? Contact Us below!</p>
-    
-    <form action = "contact.html">
-      <button type="submit">Contact Us </button>
-    </form>
+  <section class="content">
+    <h1>About Me</h1>
+    <p>I am a Technical Writer and AI Researcher with expertise in communicating complex topics clearly. My work spans across developing educational resources, writing technical documentation, and contributing to AI research projects.</p>
   </section>
-
-  <footer>
-    &copy; 2025 DSAI. All rights reserved.
-  </footer>
 </body>
 </html>
