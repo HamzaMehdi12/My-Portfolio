@@ -1,16 +1,28 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('contact-form');
-  const status = document.getElementById('form-status');
+// script.js
 
-  if (form) {
-    form.addEventListener('submit', e => {
+// Smooth scrolling for internal links
+const navLinks = document.querySelectorAll('a[href^="#"], a[href$=".html"]');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    const targetId = link.getAttribute('href');
+    if (targetId.startsWith('#')) {
       e.preventDefault();
-      const formData = new FormData(form);
-      // Mock async submission
-      setTimeout(() => {
-        status.textContent = 'Message sent successfully!';
-        form.reset();
-      }, 1000);
+      document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
+// Toggle visibility for sections (if needed)
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleButtons = document.querySelectorAll('.toggle-section');
+
+  toggleButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const target = document.querySelector(button.dataset.target);
+      if (target) {
+        target.classList.toggle('hidden');
+      }
     });
-  }
+  });
 });
