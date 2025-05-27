@@ -98,7 +98,7 @@ p {
 }
 
 section {
-  padding: 4rem 0;
+  padding: 6rem 0 4rem; /* Added top padding to account for fixed nav */
 }
 
 /* ===== Navigation ===== */
@@ -112,6 +112,7 @@ header {
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.8);
+  height: 70px;
 }
 
 header.scrolled {
@@ -192,8 +193,6 @@ nav a.active::after {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  animation: fadeInUp 1s ease 0.4s forwards;
-  opacity: 0;
 }
 
 .btn::before {
@@ -237,7 +236,6 @@ nav a.active::after {
   line-height: 1.7;
   margin-bottom: 1.5rem;
   text-align: center;
-  animation: fadeIn 1s ease;
 }
 
 .skills-list {
@@ -291,7 +289,7 @@ nav a.active::after {
 
 .card img {
   max-width: 100%;
-  height: 140px; /* Reduced image size */
+  height: 120px; /* Further reduced image size */
   object-fit: contain;
   border-radius: 10px;
   margin-bottom: 1.5rem;
@@ -327,7 +325,7 @@ nav a.active::after {
   border-radius: 20px;
   box-shadow: var(--shadow-sm);
   max-width: 800px;
-  margin: 0 auto;
+  margin: 2rem auto; /* Added margin to prevent nav overlap */
 }
 
 .contact-container {
@@ -439,7 +437,7 @@ nav a.active::after {
 /* ===== Project Pages ===== */
 .project-container {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 2rem auto; /* Added margin to prevent nav overlap */
   padding: 2rem;
   background-color: var(--light);
   border-radius: 20px;
@@ -476,11 +474,13 @@ nav a.active::after {
 
 .project-image {
   width: 100%;
-  height: 250px; /* Reduced image size */
-  object-fit: cover;
+  height: 200px; /* Further reduced image size */
+  object-fit: contain; /* Changed to contain for better proportions */
   border-radius: 15px;
   margin-bottom: 2rem;
   box-shadow: var(--shadow-md);
+  background-color: #f8fafc; /* Added background for transparent images */
+  padding: 1rem;
 }
 
 .project-content {
@@ -532,18 +532,20 @@ nav a.active::after {
 
 .project-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Smaller columns */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Smaller columns */
   gap: 1.5rem;
   margin: 2rem 0;
 }
 
 .project-gallery img {
   width: 100%;
-  height: 180px; /* Smaller gallery images */
-  object-fit: cover;
+  height: 150px; /* Smaller gallery images */
+  object-fit: contain; /* Changed to contain */
   border-radius: 10px;
   transition: transform 0.3s ease;
   box-shadow: var(--shadow-sm);
+  background-color: #f8fafc; /* Added background for transparent images */
+  padding: 0.5rem;
 }
 
 .project-gallery img:hover {
@@ -567,6 +569,7 @@ nav a.active::after {
   min-height: 70vh;
   text-align: center;
   padding: 2rem;
+  margin-top: 2rem; /* Added margin to prevent nav overlap */
 }
 
 .thanks-message h1 {
@@ -641,7 +644,11 @@ footer {
   }
   
   .project-image {
-    height: 200px;
+    height: 180px;
+  }
+  
+  section {
+    padding: 5rem 0 3rem; /* Adjusted padding for mobile */
   }
 }
 
@@ -669,6 +676,14 @@ footer {
   }
   
   .project-gallery img {
+    height: 120px;
+  }
+  
+  .project-image {
     height: 150px;
+  }
+  
+  header {
+    height: 60px;
   }
 }
