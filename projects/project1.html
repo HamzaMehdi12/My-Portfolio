@@ -3,66 +3,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stardust School Database</title>
+  <title>Smart Backup Utility | Backup Machine</title>
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-  <nav class="navbar">
-    <ul>
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="../services.html">Services</a></li>
-      <li><a href="index.html">Projects</a></li>
-      <li><a href="../contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <header>
+    <nav>
+      <div class="logo">Backup Machine</div>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="index.html" class="active">Projects</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <main class="project-detail">
-    <h1>Stardust School Database</h1>
-    <img src="../assets/EER Diagram School.png" alt="Project 1 Preview" class="project-image" />
-    <p>We specialize in designing and managing structured relational databases, with hands-on experience in architecting complex data models aligned with real-world applications.
-      Our team has architected and provisioned normalized relational tables for entities such as Courses, Teachers, Students, and Parents, based on an enhanced 
-      Entity-Extended Relationship (EER) diagram. We enforce 1-to-Many (1–N) and Many-to-1 (N–1) relationships using referential integrity constraints and cascading foreign keys. 
-      These tables were populated with dimensionally accurate sample data, including 14 course offerings, 6 faculty members, 40 student records, and 15 guardians.</p>
-    <img src="../assets/Student.png" alt="Project 1 School" class="project-image" />
-    <img src="../assets/Teacher.png" alt="Project 1 Teacher" class="project-image" />
-    <p>We also engineered an efficient bulk DML (Data Manipulation Language) workflow, utilizing a unified UPDATE ... CASE statement to map and distribute Teacher_ID, Course_ID, and 
-      Course_Name across defined student ID ranges. This was followed by an UPDATE ... JOIN operation to propagate normalized credit values from the Course dimension into the 
-      appropriate student-course mappings. While procedural WHILE loops were considered for iterative updates, they were ultimately prototyped but not used in PopSQL due to delimiter 
-      handling limitations — ensuring a lean and optimized execution strategy.</p>
+  <section class="features">
+    <h3>Stardust School Database</h3>
+    <div class="feature-boxes">
+      <div class="feature" style="max-width:800px; margin:auto;">
+        <img src="../assets/EER Diagram School.png" alt="Stardust" style="width:100%; height:auto;">
+        <p>
+          We specialize in designing and managing structured relational databases, with hands-on experience in architecting complex data models aligned with real-world applications.
+          Our team has architected and provisioned normalized relational tables for entities such as Courses, Teachers, Students, and Parents, based on an enhanced 
+          Entity-Extended Relationship (EER) diagram. We enforce 1-to-Many (1–N) and Many-to-1 (N–1) relationships using referential integrity constraints and cascading foreign keys. 
+          These tables were populated with dimensionally accurate sample data, including 14 course offerings, 6 faculty members, 40 student records, and 15 guardians.
+        </p>
 
-    <br>
-    <a href="https://github.com/HamzaMehdi12/School_RDBMS_MYSQL" class = "btn">View the source code at my Github here</a>
+        
+        <img src="../assets/Student.png" alt="Project 1 School" class="project-image" />
+        <br>
+        <img src="../assets/Teacher.png" alt="Project 1 Teacher" class="project-image" />
+        <br>
+        
+        <p>We also engineered an efficient bulk DML (Data Manipulation Language) workflow, utilizing a unified UPDATE ... CASE statement to map and distribute Teacher_ID, Course_ID, and 
+          Course_Name across defined student ID ranges. This was followed by an UPDATE ... JOIN operation to propagate normalized credit values from the Course dimension into the 
+          appropriate student-course mappings. While procedural WHILE loops were considered for iterative updates, they were ultimately prototyped but not used in PopSQL due to delimiter 
+          handling limitations — ensuring a lean and optimized execution strategy.</p>
+        <p>In short, the summary:</p>
+        <ul style="text-align:left; margin-top:20px;">
+          <li>Specialize in designing and managing structured relational databases</li>
+          <li>Hands-on experience architecting complex data models aligned with real-world applications</li>
+          <li>Architected normalized relational tables for Courses, Teachers, Students, and Parents using enhanced EER diagrams</li>
+          <li>Enforce 1-to-Many and Many-to-1 relationships with referential integrity constraints and cascading foreign keys</li>
+          <li>Populated tables with dimensionally accurate sample data: 14 courses, 6 faculty, 40 students, 15 guardians</li>
+          <li>Engineered efficient bulk DML workflow using unified UPDATE...CASE statements</li>
+          <li>Mapped/distributed Teacher_ID, Course_ID, and Course_Name across defined student ID ranges</li>
+          <li>Executed UPDATE...JOIN operations to propagate normalized credit values from Course dimension</li>
+          <li>Prototyped procedural WHILE loops for iterative updates (not used in production)</li>
+          <li>Optimized execution strategy by avoiding procedural loops due to PopSQL delimiter limitations</li>
+          <li>Maintained lean workflow by utilizing set-based SQL operations instead of iterative approaches</li>
+        </ul>
+        <br>
+        <a href="https://github.com/HamzaMehdi12/School_RDBMS_MYSQL" class = "btn">View the source code at my Github here</a>
+      
+      </div>
+    </div>
+  </section>
 
-    <br>
-
-
-    
-    <a href="index.html" class="btn">Back to Projects</a>
-  </main>
-
-  <script src="../js/script.js"></script>
-  <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    hamburger.addEventListener('click', function() {
-      this.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
-    
-    // Close menu when clicking on a link
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-      });
-    });
-  });
-</script>
   <footer>
-    <p>&copy; DSAI. All Rights Reserved</p>
+    <p>&copy; 2025 DSAI. All rights reserved.</p>
   </footer>
 </body>
 </html>
