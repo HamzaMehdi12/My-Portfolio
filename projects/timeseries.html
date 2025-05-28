@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Earthquake Prediction Model</title>
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
   <header>
@@ -14,23 +14,55 @@
         <li><a href="../index.html">Home</a></li>
         <li><a href="../about.html">About</a></li>
         <li><a href="../services.html">Services</a></li>
+        <li><a href="index.html" class="active">Projects</a></li>
         <li><a href="../contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="projects-section">
-    <h2>TimeSeries Projects</h2>
-    <div class="project-list">
-      <div class="project">
-        <img src="../assets/Predicted_Earthquake_Probability_vs_Actual_Events.png" alt="Project 2">
-        <h4>Earthquake Prediction Model</h4>
-        <p>Earthquake Prediction using Time Series Forecasting and Random Forest ensemble model.</p>
-        <a href="earthquake.html" class="btn">View Project</a>
+  <section class="features">
+    <h3>Earthquake Prediction Model</h3>
+    <div class="feature-boxes">
+      <div class="feature" style="max-width:800px; margin:auto;">
+        <img src="../assets/Predicted_Earthquake_Probability_vs_Actual_Events.png" alt="Earthquake Prediction Output" style="width:100%; height:auto;">
+
+        <p>
+          We developed an advanced machine learning model to predict the probability of daily earthquake events using a time-series framework. The model utilizes temporal features (hour, day, month), lagged seismic metrics (1, 7, 14-day intervals), and aggregated historical patterns.
+          It demonstrated exceptional performance with 100% precision, recall, F1-score, and AUC, which suggests strong class separation—though such results may also indicate possible overfitting or feature leakage.
+        </p>
+
+        <img src="../assets/Daily_Earthquake_Occurance.png" alt="Daily Earthquake Occurrence" style="width:100%; height:auto;">
+
+        <p>
+          While the model provides accurate predictions, it currently lacks spatial granularity for location-specific forecasting. Additional interpretability is offered through dimensionality reduction (PCA) and feature importance analysis. Notably, key contributors include lagged occurrences, seismic depth, and event magnitude.
+        </p>
+
+        <img src="../assets/Feature_Importance.png" alt="Feature Importance" style="width:100%; height:auto;">
+
+        <p>
+          Despite strong metrics, uncalibrated probability outputs and binary-only classification restrict practical deployment. Future improvements include spatial feature integration, calibrated probability outputs, and validation on unseen datasets to prevent overfitting.
+        </p>
+
+        <img src="../assets/PCA.png" alt="PCA Visualization" style="width:100%; height:auto;">
+
+        <p>In summary:</p>
+        <ul style="text-align:left; margin-top:20px;">
+          <li>Extracted temporal features: hour, day, month</li>
+          <li>Engineered lag features: 1, 7, 14-day seismic metrics</li>
+          <li>Achieved 100% precision/recall/F1/AUC (possible overfitting or leakage)</li>
+          <li>Visualizations: PCA, predicted vs. actual, and feature importance</li>
+          <li>Limitations: no spatial prediction, uncalibrated outputs, binary-only classification</li>
+          <li>Future scope: integrate geospatial data, calibrate probabilities, validate on real-world unseen data</li>
+        </ul>
+
+        <br>
+        <a href="https://github.com/HamzaMehdi12/2/Earthquake_ML_RF_Model" class="btn">View the source code on GitHub</a>
+        <br><br>
+        <a href="index.html" class="btn">Back to Projects</a>
       </div>
     </div>
   </section>
-<a href="index.html" class="btn">Back to Projects</a>
+
   <footer>
     <p>&copy; 2025 DSAI. All rights reserved.</p>
   </footer>
