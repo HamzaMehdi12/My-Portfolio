@@ -115,8 +115,8 @@ h1, h3 {
 }
 
 .home-image img {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
   margin: 0 auto 1rem;
   display: block;
@@ -152,15 +152,16 @@ h1, h3 {
 
 /* --- Services Page --- */
 .services-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   padding: 2rem;
+  justify-items: center;
 }
 
 .service-card {
-  width: 280px;
+  width: 100%;
+  max-width: 280px;
   background-color: #f4faff;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
@@ -169,8 +170,8 @@ h1, h3 {
 }
 
 .service-card img {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
   border-bottom: 1px solid #ddd;
   margin: auto;
@@ -182,8 +183,8 @@ h1, h3 {
 }
 
 .feature img {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
   margin: 0 auto 1rem;
   display: block;
@@ -208,8 +209,8 @@ h1, h3 {
 }
 
 .project-card img {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
   border-bottom: 1px solid #eee;
   margin: auto;
@@ -279,8 +280,8 @@ footer {
   }
 
   .home-image img {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
   }
 
   .service-card,
