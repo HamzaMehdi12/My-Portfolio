@@ -211,6 +211,44 @@ button[type="submit"] {
   cursor: pointer;
 }
 
+/* About Page Buttons */
+.about a.btn,
+.about a.btn-secondary {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-align: center;
+  margin: 10px 5px;
+  color: white;
+  background-color: #007acc;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.about a.btn-secondary {
+  background-color: #005c99;
+}
+
+.about a.btn:hover,
+.about a.btn-secondary:hover {
+  background-color: #004a80;
+}
+
+.about {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
 /* Footer */
 footer {
   background-color: #007acc;
