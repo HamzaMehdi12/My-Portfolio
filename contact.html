@@ -1,15 +1,15 @@
-<!-- File: contact.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
     <nav>
+      <div class="logo">DSAI</div>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -20,38 +20,25 @@
   </header>
 
   <section class="contact">
-    <h1>Contact Me</h1>
-    <form action="https://formspree.io/f/xvganppe" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <input type="hidden" name="_next" value="https://my-portfolio-ashy-five-16.vercel.app/thanks.html" />
-      <button type="submit">Send Message</button>
-    </form>
+    <div class="container">
+      <h3>Contact Me</h3>
+      <form action="https://formspree.io/f/xvganppe" method="POST">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   </section>
-  
-  <script src="../js/script.js"></script>
-  <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    hamburger.addEventListener('click', function() {
-      this.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
-    
-    // Close menu when clicking on a link
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-      });
-    });
-  });
-</script>
+
   <footer>
-    <p>&copy; DSAI. All Rights Reserved</p>
+    <p>&copy; 2025 DSAI. All rights reserved.</p>
   </footer>
 </body>
 </html>
