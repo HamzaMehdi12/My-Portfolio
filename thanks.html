@@ -5,33 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thank You</title>
   <link rel="stylesheet" href="css/style.css" />
-  <style>
-    .thanks-container {
-      text-align: center;
-      padding: 60px 20px;
-    }
-    .thanks-message h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-    .thanks-message p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-    }
-    .thanks-message .button {
-      background-color: #007BFF;
-      color: white;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 6px;
-    }
-  </style>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
   <header>
     <nav>
+      <div class="logo">DSAI</div>
       <ul>
         <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="projects/index.html">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -39,29 +21,21 @@
     </nav>
   </header>
 
-<section class="contact">
-  <div class="container">
-    <h2 data-aos="fade-down" style="text-align: center;">Contact Me</h2>
-    <form action="https://formspree.io/f/xvganppe" method="POST" data-aos="fade-up">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Your Email</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="6" required></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-</section>
-  
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init();</script>
+  <main class="thanks-container" data-aos="fade-in">
+    <section class="thanks-message" data-aos="zoom-in">
+      <h1>Thank You!</h1>
+      <p>Your message has been successfully sent. I will get back to you shortly.</p>
+      <a class="btn" href="index.html">Return to Home</a>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 DSAI. All rights reserved.</p>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
