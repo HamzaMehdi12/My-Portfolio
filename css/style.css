@@ -211,9 +211,9 @@ button[type="submit"] {
   cursor: pointer;
 }
 
-/* About Page Buttons */
-.about a.btn,
-.about a.btn-secondary {
+
+a.btn,
+a.btn-secondary {
   display: inline-block;
   padding: 10px 20px;
   border-radius: 4px;
@@ -225,14 +225,15 @@ button[type="submit"] {
   transition: background 0.3s ease;
 }
 
-.about a.btn-secondary {
+a.btn-secondary {
   background-color: #005c99;
 }
 
-.about a.btn:hover,
-.about a.btn-secondary:hover {
+a.btn:hover,
+a.btn-secondary:hover {
   background-color: #004a80;
 }
+/* About Page Buttons */
 
 .about {
   padding: 60px 20px;
