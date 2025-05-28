@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me</title>
-  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
-    <nav class="navbar">
-      <ul class="nav-list">
+    <nav>
+      <div class="logo">DSAI</div>
+      <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="projects/index.html">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -19,60 +19,28 @@
     </nav>
   </header>
 
-  <main class="container about-container">
-    <section class="about-section">
-      <h1>About Me</h1>
-      <p> With a strong focus on Machine Learning, our team has successfully designed, trained, and deployed models ranging from foundational algorithms to advanced systems, all supported by 
+  <section class="about">
+    <div class="container">
+      <h3>About Me</h3>
+      <p>
+        With a strong focus on Machine Learning, our team has successfully designed, trained, and deployed models ranging from foundational algorithms to advanced systems, all supported by 
         robust MLOps practices.
         Combining deep analytical insight with efficient coding expertise, we are committed to delivering high-impact solutions that drive real value for our clients. 
         As the landscape of Artificial Intelligence continues to evolve, we remain at the forefront — equipped with top-tier talent and a passion for pushing the boundaries of modern 
         technology.
-
-        
       </p>
-    </section>
-
-    <section class="skills-section">
-      <h2>Core Skills</h2>
-      <ul class="skills-list">
-        <li>Python / JavaScript / HTML / CSS</li>
-        <li>Machine Learning / Deep Learning</li>
-        <li>Web Development (FastAPI, Flask, React)</li>
-        <li>Deep Learning</li>
-        <li>Docker / Git / CI-CD</li>
-        <li>Data Analysis / Visualization</li>
-        <li>My SQL, RDBMS</li
-      </ul>
-    </section>
-
-    <section class="cta-section">
-      <p>Want to collaborate or learn more? <a href="contact.html">Get in touch</a>.</p>
-    </section>
-  </main>
+      <br>
+      <p> Learn about the services I offer</p>
+      <a href="services.html" class="btn">Show More</a>
+      <br>
+      <br>
+      <p>Want a project done? Get in touch!</p>
+      <a href="contact.html" class="btn btn-secondary">Contact Me</a>
+    </div>
+  </section> 
 
   <footer>
-    <p>&copy; 2025 DSAI. All Rights Reserved</p>
+    <p>&copy; 2025 DSAI. All rights reserved.</p>
   </footer>
-
-  <script src="js/script.js"></script>
-  <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    hamburger.addEventListener('click', function() {
-      this.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
-    
-    // Close menu when clicking on a link
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-      });
-    });
-  });
-</script>
 </body>
 </html>
