@@ -1,85 +1,64 @@
-<!-- File: index.html -->
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Data Solutions & AI</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Home</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="projects/index.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1 class="logo">DSAI</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-
   <section class="hero">
-    <h1>Machine Learning<br />and AI Researcher</h1>
-    <p>We are a dedicated team of professionals offering a comprehensive range of services designed to empower businesses and individuals alike.
-      With years of experience and a strong commitment to quality, we specialize in cutting-edge technologies including Machine Learning, Deep Learning, Artificial Intelligence, Databases, 
-      Feature Engineering, and more. Our solutions are crafted to be both innovative and reliable — helping you build smarter systems, uncover actionable insights, and stay ahead in a rapidly 
-      evolving digital landscape.</p>
-    <a class="btn" href="about.html">Read More</a>
-  </section>
-
-  <section class="about-summary">
-    <h2>About Me</h2>
-    <p>Combining deep analytical insight with efficient coding expertise, we are committed to delivering high-impact solutions that drive real value for our clients.</p>
-  </section>
-
-  <section class="services-preview">
-    <h2>Services</h2>
-    <div class="service-cards">
-      <div class="card">
-        <img src="assets/ml.png" alt="Machine Learning" />
-        <h3>Machine Learning</h3>
-        <p>Crafting precise and informative technical documents.</p>
+    <div class="container">
+      <div class="hero-text">
+        <h2>Machine Learning & AI Research</h2>
+        <p>We are a dedicated team of professionals offering a comprehensive range of services designed to empower businesses and individuals alike.
+          With years of experience and a strong commitment to quality, we specialize in cutting-edge technologies including Machine Learning, Deep Learning, Artificial Intelligence, Databases, 
+          Feature Engineering, and more. Our solutions are crafted to be both innovative and reliable — helping you build smarter systems, uncover actionable insights, and stay ahead in a rapidly 
+          evolving digital landscape.</p>
+        <a href="services.html" class="btn">Show More</a>
+        <a href="contact.html" class="btn btn-secondary">Contact Me</a>
       </div>
-      <div class="card">
-        <img src="assets/dl.png" alt="Deep Learning" />
-        <h3>Deep Learning</h3>
-        <p>Developing and implementing machine learning algorithms.</p>
-      </div>
-      <div class="card">
-        <img src="assets/py.png" alt="Python" />
-        <h3>Python Programming</h3>
-        <p>Exploring advanced neural networks and deep learning models.</p>
+      <div class="hero-image">
+        <img src="assets/ai.png" alt="AI" />
       </div>
     </div>
-    <a class="btn" href="services.html">See More Services</a>
   </section>
-
-  <section class="cta">
-    <a class="btn" href="contact.html">Get in Touch</a>
+  <section class="features">
+    <div class="container">
+      <h3>Our Features</h3>
+      <div class="feature-boxes">
+        <div class="feature">
+          <img src="assets/ml.png" alt="ML" />
+          <h4>Machine Learning Engineering</h4>
+        </div>
+        <div class="feature">
+          <img src="assets/dl.png" alt="DL" />
+          <h4>Deep Learning Engineering</h4>
+        </div>
+        <div class="feature">
+          <img src="assets/py.png" alt="PY" />
+          <h4>Python Programming</h4>
+        </div>
+      </div>
+    </div>
   </section>
-  <script src="../js/script.js"></script>
-  <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    hamburger.addEventListener('click', function() {
-      this.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
-    
-    // Close menu when clicking on a link
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-      });
-    });
-  });
-</script>
   <footer>
-    <p>&copy; DSAI. All Rights Reserved</p>
+    <p>&copy; 2025 DSAI. All rights reserved.</p>
   </footer>
 </body>
 </html>
