@@ -5,11 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Me</title>
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    h2 {
-      text-align: center;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -20,32 +15,57 @@
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="projects/index.html">Projects</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-<section class="contact">
-  <div class="container">
-    <h2 data-aos="fade-down" style="text-align: center;">Contact Me</h2>
-    <form action="https://formspree.io/f/xvganppe" method="POST" data-aos="fade-up">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" required>
+  <section class="contact">
+    <div class="container">
+      <h2 style="text-align: center;">Contact Me</h2>
+      <form action="https://formspree.io/f/xvganppe" method="POST" onsubmit="redirectToThanks(event)">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
 
-      <label for="email">Your Email</label>
-      <input type="email" id="email" name="email" required>
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required>
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="6" required></textarea>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
 
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-</section>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init();</script>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2025 DSAI. All rights reserved.</p>
   </footer>
+
+  <script>
+    function redirectToThanks(event) {
+      event.preventDefault();
+      const form = event.target;
+      const data = new FormData(form);
+
+      fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          window.location.href = "thanks.html";
+        } else {
+          alert("There was a problem submitting your form. Please try again later.");
+        }
+      })
+      .catch(error => {
+        alert("There was a network error. Please try again later.");
+      });
+    }
+  </script>
 </body>
 </html>
