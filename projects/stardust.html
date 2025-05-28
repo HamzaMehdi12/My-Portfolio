@@ -27,18 +27,33 @@
       <div class="feature" style="max-width:800px; margin:auto;">
         <img src="../assets/EER Diagram School.png" alt="Stardust" style="width:100%; height:auto;" data-aos="zoom-in">
         <p data-aos="fade-up">
-          We specialize in designing and managing structured relational databases...
+          We specialize in designing and managing structured relational databases, with hands-on experience in architecting complex data models aligned with real-world applications.
+          Our team has architected and provisioned normalized relational tables for entities such as Courses, Teachers, Students, and Parents, based on an enhanced 
+          Entity-Extended Relationship (EER) diagram. We enforce 1-to-Many (1–N) and Many-to-1 (N–1) relationships using referential integrity constraints and cascading foreign keys. 
+          These tables were populated with dimensionally accurate sample data, including 14 course offerings, 6 faculty members, 40 student records, and 15 guardians.
         </p>
 
         <img src="../assets/Student.png" alt="Project 1 School" style="width:100%; height:auto;" data-aos="fade-right" />
         <br>
         <img src="../assets/Teacher.png" alt="Project 1 Teacher" style="width:100%; height:auto;" data-aos="fade-left" />
         <br>
-        <p data-aos="fade-up">We also engineered an efficient bulk DML workflow...</p>
+        <p data-aos="fade-up">We also engineered an efficient bulk DML (Data Manipulation Language) workflow, utilizing a unified UPDATE ... CASE statement to map and distribute Teacher_ID, Course_ID, and 
+          Course_Name across defined student ID ranges. This was followed by an UPDATE ... JOIN operation to propagate normalized credit values from the Course dimension into the 
+          appropriate student-course mappings. While procedural WHILE loops were considered for iterative updates, they were ultimately prototyped but not used in PopSQL due to delimiter 
+          handling limitations — ensuring a lean and optimized execution strategy.</p>
 
         <ul style="text-align:left; margin-top:20px;" data-aos="fade-up">
           <li>Specialize in designing and managing structured relational databases</li>
-          <!-- other list items -->
+          <li>Hands-on experience architecting complex data models aligned with real-world applications</li>
+          <li>Architected normalized relational tables for Courses, Teachers, Students, and Parents using enhanced EER diagrams</li>
+          <li>Enforce 1-to-Many and Many-to-1 relationships with referential integrity constraints and cascading foreign keys</li>
+          <li>Populated tables with dimensionally accurate sample data: 14 courses, 6 faculty, 40 students, 15 guardians</li>
+          <li>Engineered efficient bulk DML workflow using unified UPDATE...CASE statements</li>
+          <li>Mapped/distributed Teacher_ID, Course_ID, and Course_Name across defined student ID ranges</li>
+          <li>Executed UPDATE...JOIN operations to propagate normalized credit values from Course dimension</li>
+          <li>Prototyped procedural WHILE loops for iterative updates (not used in production)</li>
+          <li>Optimized execution strategy by avoiding procedural loops due to PopSQL delimiter limitations</li>
+          <li>Maintained lean workflow by utilizing set-based SQL operations instead of iterative approaches</li>
         </ul>
         <br>
         <a href="https://github.com/HamzaMehdi12/School_RDBMS_MYSQL" class="btn" data-aos="fade-up">View the source code at my Github here</a>
