@@ -1,4 +1,4 @@
-/* Enhanced styles.css for Backup Machine */
+/* Enhanced styles.css for Backup Machine - Updated for layout alignment and navbar */
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -12,7 +12,7 @@ body {
 header {
   background-color: #ffffff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px 0;
+  padding: 15px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -24,7 +24,8 @@ nav {
   align-items: center;
   max-width: 1200px;
   margin: auto;
-  padding: 0 20px;
+  padding: 0 30px;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -36,35 +37,45 @@ nav {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
-  padding-left: 0;
+  gap: 25px;
   margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  display: inline-block;
 }
 
 nav a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  transition: color 0.3s ease;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+  border-radius: 5px;
 }
 
 nav a:hover {
-  color: #2d9cdb;
+  background-color: #2d9cdb;
+  color: #fff;
 }
 
 .hero {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   padding: 80px 20px;
-  background: linear-gradient(135deg, #d0f0ff, #ffffff);
-  text-align: left;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
 }
 
 .hero-text {
   flex: 1 1 50%;
   max-width: 600px;
+  text-align: left;
 }
 
 .hero-text h2 {
@@ -87,6 +98,7 @@ nav a:hover {
 .hero-image img {
   max-width: 100%;
   height: auto;
+  object-fit: contain;
 }
 
 .btn {
@@ -122,6 +134,8 @@ nav a:hover {
   justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .feature {
@@ -158,7 +172,7 @@ footer p {
 
 /* Responsive Design */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .hero {
     flex-direction: column;
     text-align: center;
@@ -169,8 +183,20 @@ footer p {
     flex: 1 1 100%;
   }
 
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   nav ul {
     flex-direction: column;
     gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
   }
 }
