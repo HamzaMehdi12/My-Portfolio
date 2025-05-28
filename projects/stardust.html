@@ -23,45 +23,46 @@
   <section class="features">
     <h3>Stardust School Database</h3>
     <div class="feature-boxes">
-      <div class="feature" style="max-width:800px; margin:auto;">
-        <img src="../assets/EER Diagram School.png" alt="Stardust" style="width:100%; height:auto;">
-        <p>
+      <div class="feature" style="max-width:900px; margin:auto; text-align:center;">
+        <img src="../assets/EER Diagram School.png" alt="Stardust" style="width:100%; height:auto; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        <p style="text-align:justify; margin-top:1.5rem;">
           We specialize in designing and managing structured relational databases, with hands-on experience in architecting complex data models aligned with real-world applications.
           Our team has architected and provisioned normalized relational tables for entities such as Courses, Teachers, Students, and Parents, based on an enhanced 
           Entity-Extended Relationship (EER) diagram. We enforce 1-to-Many (1–N) and Many-to-1 (N–1) relationships using referential integrity constraints and cascading foreign keys. 
           These tables were populated with dimensionally accurate sample data, including 14 course offerings, 6 faculty members, 40 student records, and 15 guardians.
         </p>
 
-        
-        <img src="../assets/Student.png" alt="Project 1 School" style="width:100%; height:auto;" />
-        <br>
-        <img src="../assets/Teacher.png" alt="Project 1 Teacher" style="width:100%; height:auto;"  />
-        <br>
-        
-        <p>We also engineered an efficient bulk DML (Data Manipulation Language) workflow, utilizing a unified UPDATE ... CASE statement to map and distribute Teacher_ID, Course_ID, and 
-          Course_Name across defined student ID ranges. This was followed by an UPDATE ... JOIN operation to propagate normalized credit values from the Course dimension into the 
-          appropriate student-course mappings. While procedural WHILE loops were considered for iterative updates, they were ultimately prototyped but not used in PopSQL due to delimiter 
-          handling limitations — ensuring a lean and optimized execution strategy.</p>
-        <p>In short, the summary:</p>
-        <ul style="text-align:left; margin-top:20px;">
-          <li>Specialize in designing and managing structured relational databases</li>
-          <li>Hands-on experience architecting complex data models aligned with real-world applications</li>
-          <li>Architected normalized relational tables for Courses, Teachers, Students, and Parents using enhanced EER diagrams</li>
-          <li>Enforce 1-to-Many and Many-to-1 relationships with referential integrity constraints and cascading foreign keys</li>
-          <li>Populated tables with dimensionally accurate sample data: 14 courses, 6 faculty, 40 students, 15 guardians</li>
-          <li>Engineered efficient bulk DML workflow using unified UPDATE...CASE statements</li>
-          <li>Mapped/distributed Teacher_ID, Course_ID, and Course_Name across defined student ID ranges</li>
-          <li>Executed UPDATE...JOIN operations to propagate normalized credit values from Course dimension</li>
-          <li>Prototyped procedural WHILE loops for iterative updates (not used in production)</li>
-          <li>Optimized execution strategy by avoiding procedural loops due to PopSQL delimiter limitations</li>
-          <li>Maintained lean workflow by utilizing set-based SQL operations instead of iterative approaches</li>
+        <div style="display:grid; gap:1rem; margin:2rem 0;">
+          <img src="../assets/Student.png" alt="Project 1 School" style="width:100%; height:auto; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+          <img src="../assets/Teacher.png" alt="Project 1 Teacher" style="width:100%; height:auto; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        </div>
+
+        <p style="text-align:justify;">
+          We also engineered an efficient bulk DML (Data Manipulation Language) workflow, utilizing a unified <code>UPDATE ... CASE</code> statement to map and distribute <code>Teacher_ID</code>, <code>Course_ID</code>, and 
+          <code>Course_Name</code> across defined student ID ranges. This was followed by an <code>UPDATE ... JOIN</code> operation to propagate normalized credit values from the Course dimension into the 
+          appropriate student-course mappings. While procedural <code>WHILE</code> loops were considered for iterative updates, they were ultimately prototyped but not used in PopSQL due to delimiter 
+          handling limitations — ensuring a lean and optimized execution strategy.
+        </p>
+
+        <h4 style="text-align:left; margin-top:2rem;">Project Summary:</h4>
+        <ul style="text-align:left; margin-top:1rem; line-height:1.8;">
+          <li>Designed and managed structured relational databases.</li>
+          <li>Architected complex data models aligned with real-world use cases.</li>
+          <li>Developed normalized tables for Courses, Teachers, Students, and Parents using EER diagrams.</li>
+          <li>Applied referential integrity and cascading foreign key constraints.</li>
+          <li>Populated tables with realistic sample data (14 courses, 6 faculty, 40 students, 15 guardians).</li>
+          <li>Executed bulk DML workflows with <code>UPDATE...CASE</code> and <code>UPDATE...JOIN</code>.</li>
+          <li>Avoided procedural loops in favor of set-based SQL operations.</li>
         </ul>
-        <br>
-        <a href="https://github.com/HamzaMehdi12/School_RDBMS_MYSQL" class = "btn">View the source code at my Github here</a>
-        <br>
-        <br>
-        <a href="mysql.html" class = "btn">Back to SQL Projects</a>
-      
+
+        <div style="margin-top:2rem;">
+          <a href="https://github.com/HamzaMehdi12/School_RDBMS_MYSQL" class="btn" target="_blank">View Source Code on GitHub</a>
+        </div>
+
+        <div style="margin-top:1rem;">
+          <a href="mysql.html" class="btn">Back to MYSQL Projects</a>
+        </div>
+
       </div>
     </div>
   </section>
