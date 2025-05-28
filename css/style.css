@@ -1,4 +1,4 @@
-/* Enhanced styles.css for Backup Machine - Updated for layout alignment and navbar */
+/* Enhanced styles.css for Backup Machine - Improved Navbar, Hero Layout */
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -12,26 +12,28 @@ body {
 header {
   background-color: #ffffff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 15px 0;
+  padding: 0;
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: 100%;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 30px;
-  flex-wrap: wrap;
+  padding: 15px 30px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #ffffff;
 }
 
 .logo {
   font-size: 1.8rem;
   font-weight: bold;
   color: #2d9cdb;
+  padding: 10px;
 }
 
 nav ul {
@@ -73,8 +75,7 @@ nav a:hover {
 }
 
 .hero-text {
-  flex: 1 1 50%;
-  max-width: 600px;
+  flex: 1;
   text-align: left;
 }
 
@@ -91,8 +92,8 @@ nav a:hover {
 }
 
 .hero-image {
-  flex: 1 1 40%;
-  text-align: center;
+  flex: 1;
+  text-align: right;
 }
 
 .hero-image img {
@@ -181,11 +182,13 @@ footer p {
   .hero-text,
   .hero-image {
     flex: 1 1 100%;
+    text-align: center;
   }
 
   nav {
     flex-direction: column;
     align-items: flex-start;
+    padding: 10px 20px;
   }
 
   nav ul {
