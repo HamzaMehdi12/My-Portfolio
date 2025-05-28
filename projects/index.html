@@ -1,15 +1,15 @@
-<!-- File: projects/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects</title>
-  <link rel="stylesheet" href="../css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Backup Machine</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header>
     <nav>
+      <div class="logo">Backup Machine</div>
       <ul>
         <li><a href="../index.html">Home</a></li>
         <li><a href="../about.html">About</a></li>
@@ -18,45 +18,27 @@
       </ul>
     </nav>
   </header>
-  <section class="projects">
-    <h1>Projects</h1>
-    <div class="project-cards">
-      <div class="card">
-        <a href="project1.html">
-          <img src="../assets/EER Diagram School.png" alt="Project 1" />
-          <h3>Stardust School Database</h3>
-        </a>
+
+  <section class="features">
+    <h3>Projects</h3>
+    <div class="feature-boxes">
+      <div class="feature">
+        <img src="assets/EER Diagram School.png" alt="Project 1">
+        <h4>Stardust School Database</h4>
+        <p>A school Database based on MYSQL RDBMS.</p>
+        <a href="project1.html" class="btn">View Project</a>
       </div>
-      <div class="card">
-        <a href="project2.html">
-          <img src="../assets/Predicted_Earthquake_Probability_vs_Actual_Events.png" alt="Project 2" />
-          <h3>Earthquake Prediction Model</h3>
-        </a>
+      <div class="feature">
+        <img src="assets/Predicted_Earthquake_Probability_vs_Actual_Events.png" alt="Project 2">
+        <h4>Erthquak Prediction Model</h4>
+        <p>Earthquake Prediction Model using TimeSeries Forecasting and Random Forest Tree ensemble model.</p>
+        <a href="project2.html" class="btn">View Project</a>
       </div>
     </div>
   </section>
-  <script src="../js/script.js"></script>
-  <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    hamburger.addEventListener('click', function() {
-      this.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
-    
-    // Close menu when clicking on a link
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-      });
-    });
-  });
-</script>
+
   <footer>
-    <p>&copy; DSAI. All Rights Reserved</p>
+    <p>&copy; 2025 DSAI. All rights reserved.</p>
   </footer>
 </body>
 </html>
