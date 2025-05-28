@@ -82,7 +82,7 @@ h1, h3 {
 .home {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 4rem 2rem;
   gap: 2rem;
   flex-wrap: wrap;
@@ -91,10 +91,11 @@ h1, h3 {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   margin: 2rem auto;
   max-width: 1100px;
+  text-align: center;
 }
 
 .home-text {
-  flex: 1 1 50%;
+  flex: 1 1 100%;
   min-width: 300px;
 }
 
@@ -109,16 +110,17 @@ h1, h3 {
 }
 
 .home-image {
-  flex: 1 1 40%;
+  flex: 1 1 100%;
   text-align: center;
 }
 
 .home-image img {
-  max-width: 100%;
-  width: 100px;
-  height: 100px;
-  border-radius: 10px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
+  margin: 0 auto 1rem;
+  display: block;
+  border-radius: 10px;
 }
 
 .services-preview {
@@ -145,6 +147,7 @@ h1, h3 {
   padding: 1rem 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
   min-width: 180px;
+  text-align: center;
 }
 
 /* --- Services Page --- */
@@ -166,20 +169,31 @@ h1, h3 {
 }
 
 .service-card img {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-bottom: 1px solid #ddd;
   margin: auto;
   padding: 1rem 0;
 }
 
+.feature {
+  text-align: center;
+}
+
 .feature img {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   margin: 0 auto 1rem;
   display: block;
+}
+
+.feature h4 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: #005f99;
+  text-align: center;
 }
 
 /* --- Projects Page --- */
@@ -194,8 +208,8 @@ h1, h3 {
 }
 
 .project-card img {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-bottom: 1px solid #eee;
   margin: auto;
@@ -265,8 +279,8 @@ footer {
   }
 
   .home-image img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
   }
 
   .service-card,
