@@ -8,6 +8,13 @@ body {
   background-color: #f8fbff;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
 header {
   background-color: #e0f0ff;
   padding: 1rem 2rem;
