@@ -178,6 +178,25 @@ h1, h3 {
   padding: 1rem 0;
 }
 
+.features {
+  padding: 2rem;
+  text-align: center;
+}
+
+.features h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #005f99;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  justify-items: center;
+}
+
 .feature {
   text-align: center;
 }
@@ -198,10 +217,28 @@ h1, h3 {
 }
 
 /* --- Projects Page --- */
+.projects-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.projects-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #005f99;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  justify-items: center;
+}
+
 .project-card {
   max-width: 400px;
   background-color: #fdfdfd;
-  margin: 1rem auto;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   overflow: hidden;
@@ -291,6 +328,11 @@ footer {
 
   .services-preview ul {
     flex-direction: column;
+  }
+
+  .features-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 
   nav ul {
