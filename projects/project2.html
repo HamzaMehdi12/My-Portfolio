@@ -1,62 +1,74 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Earthquake Pred Model</title>
+  <title>Earthquake Prediction Model</title>
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-  <nav class="navbar">
-    <ul>
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="../services.html">Services</a></li>
-      <li><a href="index.html">Projects</a></li>
-      <li><a href="../contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <header>
+    <nav>
+      <div class="logo">DSAI</div>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="index.html" class="active">Projects</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <main class="project-detail">
-    <h1>Earthquake PredictionRF Model</h1>
-    <img src="../assets/Predicted_Earthquake_Probability_vs_Actual_Events.png" alt="Project 2 Preview" class="project-image" />
-    <p>The model demonstrates exceptional performance with 100% precision, recall, F1-score, and AUC metrics, suggesting perfect class separation—potentially indicating an idealized synthetic 
-      dataset, overfitting, or feature leakage (e.g., lag features inadvertently revealing future events). Robust preprocessing includes temporal feature extraction (hour, day, month), 
-      daily seismic metric aggregation, and lag features (1, 7, 14 days), though it lacks spatial analysis for location-specific predictions.</p> 
-    <img src="../assets/Daily_Earthquake_Occurance.png" alt="Project 2 Daily" class="project-image" />
-    <p>Interpretability is enhanced through visualizations like PCA projections, predicted vs. actual probabilities, and feature importance rankings (highlighting lagged occurrences, depth, 
-      and magnitude as key predictors). However, limitations include uncalibrated confidence scores, binary classification (no magnitude/location output), and potential data leakage risks.</p> 
-    <img src="../assets/Feature_Importance.png" alt="Project 2 Feature" class="project-image" />  
-    <p>Future improvements should incorporate geospatial features, probability calibration, and rigorous out-of-sample validation to ensure real-world applicability.</p>
-    <img src="../assets/PCA.png" alt="Project 2 PCA" class="project-image" />
+  <section class="features">
+    <h3>Earthquake Prediction Model</h3>
+    <div class="feature-boxes">
+      <div class="feature" style="max-width:800px; margin:auto;">
+        <img src="../assets/Predicted_Earthquake_Probability_vs_Actual_Events.png" alt="Eq" style="width:100%; height:auto;">
+        <p>
+          The model demonstrates exceptional performance with 100% precision, recall, F1-score, and AUC metrics, suggesting perfect class separation—potentially indicating an idealized synthetic 
+          dataset, overfitting, or feature leakage (e.g., lag features inadvertently revealing future events). Robust preprocessing includes temporal feature extraction (hour, day, month), 
+          daily seismic metric aggregation, and lag features (1, 7, 14 days), though it lacks spatial analysis for location-specific prediction
+        </p>
+        <br>
+        <img src="../assets/Daily_Earthquake_Occurance.png" alt="Daily" style="width:100%; height:auto;">
+        <br>
+          <p>
+            Interpretability is enhanced through visualizations like PCA projections, predicted vs. actual probabilities, and feature importance rankings (highlighting lagged occurrences, depth, 
+            and magnitude as key predictors). However, limitations include uncalibrated confidence scores, binary classification (no magnitude/location output), and potential data leakage risks.
+          </p>
+        <br>
+        <img src="../assets/Feature_Importance.png" alt="Feat" style="width:100%; height:auto;">
+        <br>
+          <p>Future improvements should incorporate geospatial features, probability calibration, and rigorous out-of-sample validation to ensure real-world applicability.</p>
+        <br>
+        <img src="../assets/PCA.png" alt="PCA" style="width:100%; height:auto;">
+        <br>
+        <br>
 
-    <a href="https://github.com/HamzaMehdi12/Earthquake_ML_RF_Model" class = "btn">View the source code at my Github here</a>
-    <a href="index.html" class="btn">Back to Projects</a>
-  </main>
+        <p>In Conclusion:</p>
+        <ul style="text-align:left; margin-top:20px;">
+          <li>Preprocessing: Temporal features extracted (hour/day/month), Daily seismic aggregation with lag features (1/7/14 days), Lacks spatial analysis for location-specific modeling</li>
+          <li>Performance Insights: Perfect metrics (100% precision/recall/F1/AUC) suggest possible overfitting, synthetic data, or feature leakage; Indicates need for spatial analysis in prediction</li>
+          <li>Interpretability & Limitations: Visualizations (PCA, feature importance) identify key predictors (lagged events, depth, magnitude), Limited by uncalibrated confidence scores and binary classification (no location/magnitude output)
+              , Potential data leakage risks in features</li>
+          <li>Future Enhancements: Add geospatial analysis and probability calibration, Implement rigorous out-of-sample validation</li>
+        </ul>
+        <br>
 
-  <script src="../js/script.js"></script>
-  <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    hamburger.addEventListener('click', function() {
-      this.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
-    
-    // Close menu when clicking on a link
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-      });
-    });
-  });
-</script>
+        <br>
+        <a href="https://github.com/HamzaMehdi12/2/Earthquake_ML_RF_Model" class = "btn">View the source code at my Github here</a>
+
+        <br>
+        <br>
+
+        <a href="index.html" class = "btn">Back to Projects</a>
+      </div>
+    </div>
+  </section>
+
   <footer>
-    <p>&copy; DSAI. All Rights Reserved</p>
+    <p>&copy; 2025 DSAI. All rights reserved.</p>
   </footer>
 </body>
 </html>
