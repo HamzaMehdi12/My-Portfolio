@@ -4,7 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thank You</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .thanks-container {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .thanks-message h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .thanks-message p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    .thanks-message .button {
+      background-color: #007BFF;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -12,7 +33,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="projects.html">Projects</a></li>
+        <li><a href="projects/index.html">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -25,27 +46,9 @@
       <a class="button" href="index.html">Return to Home</a>
     </section>
   </main>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    hamburger.addEventListener('click', function() {
-      this.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
-    
-    // Close menu when clicking on a link
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-      });
-    });
-  });
-</script>
+
   <footer>
-    <p>&copy; DSAI. All rights reserved.</p>
+    <p>&copy; 2025 DSAI. All rights reserved.</p>
   </footer>
 </body>
 </html>
