@@ -1,15 +1,15 @@
-<!-- File: services.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
     <nav>
+      <div class="logo">DSAI</div>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -18,38 +18,45 @@
       </ul>
     </nav>
   </header>
+
   <section class="services">
-    <h1>Services</h1>
-    <div class="service-cards">
-      <div class="card"><img src="assets/ml.png" alt="ML" /><h3>Machine Learning</h3><p>Our solutions are crafted to be both innovative and reliable — helping you build smarter systems, uncover actionable insights, and stay ahead in a rapidly evolving digital landscape.</p></div>
-      <div class="card"><img src="assets/dl.png" alt="DL" /><h3>Deep Learning</h3><p>As the landscape of Artificial Intelligence continues to evolve, we remain at the forefront — equipped with top-tier talent and a passion for pushing the boundaries of modern technology.</p></div>
-      <div class="card"><img src="assets/py.png" alt="Py" /><h3>Python Language</h3><p>Our team possesses exceptionally strong programming skills, using Python for a wide range of tasks — from scripting and automation to full-scale machine learning pipelines and backend development.</p></div>
-        <div class="card"><img src="assets/fr.png" alt="FR" /><h3>Feature Engineering</h3><p>Our team excels at identifying, creating, and refining features through advanced techniques such as feature extraction, selection, scaling, encoding, dimensionality reduction, and interaction term generation.</p></div>
-      <div class="card"><img src="assets/ai.png" alt="AI" /><h3>AI Research</h3><p>We are proficient in leveraging popular Python libraries and frameworks such as NumPy, Pandas, Scikit-learn, TensorFlow, PyTorch, Flask, and FastAPI, among others</p></div>
+    <h3>Our Services</h3>
+    <div class="service-list">
+      <div class="service-item">
+        <img src="assets/ml.png" alt="ML">
+        <h4>Machine Learning Engineering</h4>
+        <p></p>
+      </div>
+      <div class="service-item">
+        <img src="assets/dl.png" alt="DL">
+        <h4>Deep Learning Engineering</h4>
+        <p>As the landscape of Artificial Intelligence continues to evolve, we remain at the forefront — equipped with top-tier talent and a passion for pushing the boundaries of modern technology.</p>
+      </div>
+      <div class="service-item">
+        <img src="assets/py.png" alt="Py">
+        <h4>Python Language</h4>
+        <p>Our team possesses exceptionally strong programming skills, using Python for a wide range of tasks — from scripting and automation to full-scale machine learning pipelines and backend development.</p>
+      </div>
+      <div class="service-item">
+        <img src="assets/fr.png" alt="FR">
+        <h4>Feature Engineering</h4>
+        <p>Our team excels at identifying, creating, and refining features through advanced techniques such as feature extraction, selection, scaling, encoding, dimensionality reduction, and interaction term generation.</p>
+      </div>
+      <div class="service-item">
+        <img src="assets/ai.png" alt="AI">
+        <h4>AI Research</h4>
+        <p>We are proficient in leveraging popular Python libraries and frameworks such as NumPy, Pandas, Scikit-learn, TensorFlow, PyTorch, Flask, and FastAPI, among others.</p>
+      </div>
+      <div class="service-item">
+        <img src="assets/EER Diagram School..png" alt="sql">
+        <h4>MYSQL RDBMS</h4>
+        <p>Expert design, optimization, and management of relational databases—including schema architecture, query tuning, ACID-compliant transactions, replication, and secure scaling—for high-performance data storage and retrieval.</p>
+      </div>
     </div>
   </section>
-  <script src="../js/script.js"></script>
-  <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    hamburger.addEventListener('click', function() {
-      this.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
-    
-    // Close menu when clicking on a link
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-      });
-    });
-  });
-</script>
+
   <footer>
-    <p>&copy; DSAI. All Rights Reserved</p>
+    <p>&copy; 2025 DSAI. All rights reserved.</p>
   </footer>
 </body>
 </html>
