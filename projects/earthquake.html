@@ -5,6 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Earthquake Prediction Model</title>
   <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .project-img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+    }
+    .summary-list {
+      text-align: left;
+      margin-top: 20px;
+      padding-left: 20px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -23,46 +37,41 @@
   <section class="features">
     <h3>Earthquake Prediction Model</h3>
     <div class="feature-boxes">
-      <div class="feature" style="max-width:800px; margin:auto;">
-        <img src="../assets/Predicted_Earthquake_Probability_vs_Actual_Events.png" alt="Eq" style="width:100%; height:auto;">
+      <div class="feature" style="max-width: 900px; margin: auto;">
+
+        <img src="../assets/Predicted_Earthquake_Probability_vs_Actual_Events.png" alt="Prediction" class="project-img">
         <p>
-          The model demonstrates exceptional performance with 100% precision, recall, F1-score, and AUC metrics, suggesting perfect class separation—potentially indicating an idealized synthetic 
-          dataset, overfitting, or feature leakage (e.g., lag features inadvertently revealing future events). Robust preprocessing includes temporal feature extraction (hour, day, month), 
-          daily seismic metric aggregation, and lag features (1, 7, 14 days), though it lacks spatial analysis for location-specific prediction
+          This model demonstrates exceptional performance with <strong>100% precision, recall, F1-score, and AUC</strong>. These metrics may indicate an <em>idealized synthetic dataset</em>, potential <strong>overfitting</strong>, or <strong>feature leakage</strong> (e.g., lag features inadvertently revealing future events).
         </p>
-        <br>
-        <img src="../assets/Daily_Earthquake_Occurance.png" alt="Daily" style="width:100%; height:auto;">
-        <br>
-          <p>
-            Interpretability is enhanced through visualizations like PCA projections, predicted vs. actual probabilities, and feature importance rankings (highlighting lagged occurrences, depth, 
-            and magnitude as key predictors). However, limitations include uncalibrated confidence scores, binary classification (no magnitude/location output), and potential data leakage risks.
-          </p>
-        <br>
-        <img src="../assets/Feature_Importance.png" alt="Feat" style="width:100%; height:auto;">
-        <br>
-          <p>Future improvements should incorporate geospatial features, probability calibration, and rigorous out-of-sample validation to ensure real-world applicability.</p>
-        <br>
-        <img src="../assets/PCA.png" alt="PCA" style="width:100%; height:auto;">
-        <br>
-        <br>
+        <p>
+          Preprocessing includes <strong>temporal feature extraction</strong> (hour, day, month), daily seismic metric aggregation, and lag features (1, 7, 14 days), though it currently <strong>lacks spatial analysis</strong> for location-specific prediction.
+        </p>
 
-        <p>In Conclusion:</p>
-        <ul style="text-align:left; margin-top:20px;">
-          <li>Preprocessing: Temporal features extracted (hour/day/month), Daily seismic aggregation with lag features (1/7/14 days), Lacks spatial analysis for location-specific modeling</li>
-          <li>Performance Insights: Perfect metrics (100% precision/recall/F1/AUC) suggest possible overfitting, synthetic data, or feature leakage; Indicates need for spatial analysis in prediction</li>
-          <li>Interpretability & Limitations: Visualizations (PCA, feature importance) identify key predictors (lagged events, depth, magnitude), Limited by uncalibrated confidence scores and binary classification (no location/magnitude output)
-              , Potential data leakage risks in features</li>
-          <li>Future Enhancements: Add geospatial analysis and probability calibration, Implement rigorous out-of-sample validation</li>
+        <img src="../assets/Daily_Earthquake_Occurance.png" alt="Daily Occurrence" class="project-img">
+
+        <p>
+          Interpretability is enhanced using visualizations like <strong>PCA projections</strong>, predicted vs. actual probabilities, and <strong>feature importance rankings</strong> (highlighting lagged occurrences, depth, and magnitude as key predictors). However, limitations include <strong>uncalibrated confidence scores</strong>, binary classification (no magnitude/location prediction), and potential <strong>data leakage</strong>.
+        </p>
+
+        <img src="../assets/Feature_Importance.png" alt="Feature Importance" class="project-img">
+
+        <p>
+          Future improvements should integrate <strong>geospatial features</strong>, <strong>calibrate probabilities</strong>, and implement rigorous <strong>out-of-sample validation</strong> to ensure real-world reliability.
+        </p>
+
+        <img src="../assets/PCA.png" alt="PCA Analysis" class="project-img">
+
+        <p><strong>Summary:</strong></p>
+        <ul class="summary-list">
+          <li><strong>Preprocessing:</strong> Extracted temporal features (hour/day/month), aggregated seismic metrics with lag features (1/7/14 days), spatial data missing</li>
+          <li><strong>Model Insights:</strong> 100% evaluation metrics suggest idealized or overfit model, lacking generalization across real-world datasets</li>
+          <li><strong>Interpretability:</strong> Visual tools (PCA, importance rankings) aid transparency; issues include data leakage and limited prediction scope</li>
+          <li><strong>Enhancements Needed:</strong> Add geospatial features, confidence score calibration, and robust validation strategies</li>
         </ul>
-        <br>
 
-        <br>
-        <a href="https://github.com/HamzaMehdi12/2/Earthquake_ML_RF_Model" class = "btn">View the source code at my Github here</a>
-
-        <br>
-        <br>
-
-        <a href="timeseries.html" class = "btn">Back to TimeSeries Projects</a>
+        <a href="https://github.com/HamzaMehdi12/2/Earthquake_ML_RF_Model" class="btn">View the source code on GitHub</a>
+        <br><br>
+        <a href="timeseries.html" class="btn">Back to TimeSeries Projects</a>
       </div>
     </div>
   </section>
