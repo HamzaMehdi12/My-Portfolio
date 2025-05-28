@@ -108,7 +108,10 @@ h1, h3 {
 
 .home-image img {
   max-width: 100%;
+  width: 400px;
+  height: auto;
   border-radius: 10px;
+  object-fit: contain;
 }
 
 .services-preview {
@@ -135,6 +138,49 @@ h1, h3 {
   padding: 1rem 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
   min-width: 180px;
+}
+
+/* --- Services Page --- */
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.service-card {
+  width: 280px;
+  background-color: #f4faff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  text-align: center;
+}
+
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+/* --- Projects Page --- */
+.project-card {
+  max-width: 400px;
+  background-color: #fdfdfd;
+  margin: 1rem auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  text-align: center;
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
 }
 
 /* --- Contact Section --- */
@@ -197,6 +243,20 @@ footer {
 
   .home-text, .home-image {
     flex: 1 1 100%;
+  }
+
+  .home-image img {
+    width: 100%;
+  }
+
+  .service-card,
+  .project-card {
+    width: 90%;
+  }
+
+  .service-card img,
+  .project-card img {
+    height: 160px;
   }
 
   .services-preview ul {
