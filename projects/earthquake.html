@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Earthquake Prediction Model</title>
-  <link rel="stylesheet" href="../css/style.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -21,25 +21,38 @@
     </nav>
   </header>
 
-  <section class="features">
-    <h3 data-aos="fade-down">Earthquake Prediction Model</h3>
+  <section class="features" data-aos="fade-up">
+    <h3>Earthquake Prediction Model</h3>
     <div class="feature-boxes">
       <div class="feature" style="max-width:800px; margin:auto;">
         <img src="../assets/Predicted_Earthquake_Probability_vs_Actual_Events.png" alt="Eq" style="width:100%; height:auto;" data-aos="zoom-in">
-        <p data-aos="fade-up">The model demonstrates exceptional performance...</p>
+        <p data-aos="fade-right">
+          The model demonstrates exceptional performance with 100% precision, recall, F1-score, and AUC metrics, suggesting perfect class separation—potentially indicating an idealized synthetic 
+          dataset, overfitting, or feature leakage (e.g., lag features inadvertently revealing future events). Robust preprocessing includes temporal feature extraction (hour, day, month), 
+          daily seismic metric aggregation, and lag features (1, 7, 14 days), though it lacks spatial analysis for location-specific prediction.
+        </p>
 
-        <img src="../assets/Daily_Earthquake_Occurance.png" alt="Daily" style="width:100%; height:auto;" data-aos="fade-right">
-        <p data-aos="fade-up">Interpretability is enhanced through visualizations...</p>
+        <img src="../assets/Daily_Earthquake_Occurance.png" alt="Daily" style="width:100%; height:auto;" data-aos="zoom-in">
+        <p data-aos="fade-left">
+          Interpretability is enhanced through visualizations like PCA projections, predicted vs. actual probabilities, and feature importance rankings (highlighting lagged occurrences, depth, 
+          and magnitude as key predictors). However, limitations include uncalibrated confidence scores, binary classification (no magnitude/location output), and potential data leakage risks.
+        </p>
 
-        <img src="../assets/Feature_Importance.png" alt="Feat" style="width:100%; height:auto;" data-aos="fade-left">
-        <p data-aos="fade-up">Future improvements should incorporate geospatial features...</p>
+        <img src="../assets/Feature_Importance.png" alt="Feat" style="width:100%; height:auto;" data-aos="zoom-in">
+        <p data-aos="fade-up">
+          Future improvements should incorporate geospatial features, probability calibration, and rigorous out-of-sample validation to ensure real-world applicability.
+        </p>
 
         <img src="../assets/PCA.png" alt="PCA" style="width:100%; height:auto;" data-aos="zoom-in">
 
+        <p data-aos="fade-up">In Conclusion:</p>
         <ul style="text-align:left; margin-top:20px;" data-aos="fade-up">
-          <li>Preprocessing: Temporal features extracted...</li>
-          <!-- other list items -->
+          <li>Preprocessing: Temporal features extracted (hour/day/month), Daily seismic aggregation with lag features (1/7/14 days), Lacks spatial analysis for location-specific modeling</li>
+          <li>Performance Insights: Perfect metrics (100% precision/recall/F1/AUC) suggest possible overfitting, synthetic data, or feature leakage; Indicates need for spatial analysis in prediction</li>
+          <li>Interpretability & Limitations: Visualizations (PCA, feature importance) identify key predictors (lagged events, depth, magnitude), Limited by uncalibrated confidence scores and binary classification (no location/magnitude output), Potential data leakage risks in features</li>
+          <li>Future Enhancements: Add geospatial analysis and probability calibration, Implement rigorous out-of-sample validation</li>
         </ul>
+
         <br>
         <a href="https://github.com/HamzaMehdi12/2/Earthquake_ML_RF_Model" class="btn" data-aos="fade-up">View the source code at my Github here</a>
         <br><br>
