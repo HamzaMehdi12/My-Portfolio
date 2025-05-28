@@ -5,20 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Earthquake Prediction Model</title>
   <link rel="stylesheet" href="../css/style.css" />
-  <style>
-    .project-img {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      margin-top: 20px;
-    }
-    .summary-list {
-      text-align: left;
-      margin-top: 20px;
-      padding-left: 20px;
-    }
-  </style>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
   <header>
@@ -35,43 +22,28 @@
   </header>
 
   <section class="features">
-    <h3>Earthquake Prediction Model</h3>
+    <h3 data-aos="fade-down">Earthquake Prediction Model</h3>
     <div class="feature-boxes">
-      <div class="feature" style="max-width: 900px; margin: auto;">
+      <div class="feature" style="max-width:800px; margin:auto;">
+        <img src="../assets/Predicted_Earthquake_Probability_vs_Actual_Events.png" alt="Eq" style="width:100%; height:auto;" data-aos="zoom-in">
+        <p data-aos="fade-up">The model demonstrates exceptional performance...</p>
 
-        <img src="../assets/Predicted_Earthquake_Probability_vs_Actual_Events.png" alt="Prediction" class="project-img">
-        <p>
-          This model demonstrates exceptional performance with <strong>100% precision, recall, F1-score, and AUC</strong>. These metrics may indicate an <em>idealized synthetic dataset</em>, potential <strong>overfitting</strong>, or <strong>feature leakage</strong> (e.g., lag features inadvertently revealing future events).
-        </p>
-        <p>
-          Preprocessing includes <strong>temporal feature extraction</strong> (hour, day, month), daily seismic metric aggregation, and lag features (1, 7, 14 days), though it currently <strong>lacks spatial analysis</strong> for location-specific prediction.
-        </p>
+        <img src="../assets/Daily_Earthquake_Occurance.png" alt="Daily" style="width:100%; height:auto;" data-aos="fade-right">
+        <p data-aos="fade-up">Interpretability is enhanced through visualizations...</p>
 
-        <img src="../assets/Daily_Earthquake_Occurance.png" alt="Daily Occurrence" class="project-img">
+        <img src="../assets/Feature_Importance.png" alt="Feat" style="width:100%; height:auto;" data-aos="fade-left">
+        <p data-aos="fade-up">Future improvements should incorporate geospatial features...</p>
 
-        <p>
-          Interpretability is enhanced using visualizations like <strong>PCA projections</strong>, predicted vs. actual probabilities, and <strong>feature importance rankings</strong> (highlighting lagged occurrences, depth, and magnitude as key predictors). However, limitations include <strong>uncalibrated confidence scores</strong>, binary classification (no magnitude/location prediction), and potential <strong>data leakage</strong>.
-        </p>
+        <img src="../assets/PCA.png" alt="PCA" style="width:100%; height:auto;" data-aos="zoom-in">
 
-        <img src="../assets/Feature_Importance.png" alt="Feature Importance" class="project-img">
-
-        <p>
-          Future improvements should integrate <strong>geospatial features</strong>, <strong>calibrate probabilities</strong>, and implement rigorous <strong>out-of-sample validation</strong> to ensure real-world reliability.
-        </p>
-
-        <img src="../assets/PCA.png" alt="PCA Analysis" class="project-img">
-
-        <p><strong>Summary:</strong></p>
-        <ul class="summary-list">
-          <li><strong>Preprocessing:</strong> Extracted temporal features (hour/day/month), aggregated seismic metrics with lag features (1/7/14 days), spatial data missing</li>
-          <li><strong>Model Insights:</strong> 100% evaluation metrics suggest idealized or overfit model, lacking generalization across real-world datasets</li>
-          <li><strong>Interpretability:</strong> Visual tools (PCA, importance rankings) aid transparency; issues include data leakage and limited prediction scope</li>
-          <li><strong>Enhancements Needed:</strong> Add geospatial features, confidence score calibration, and robust validation strategies</li>
+        <ul style="text-align:left; margin-top:20px;" data-aos="fade-up">
+          <li>Preprocessing: Temporal features extracted...</li>
+          <!-- other list items -->
         </ul>
-
-        <a href="https://github.com/HamzaMehdi12/2/Earthquake_ML_RF_Model" class="btn">View the source code on GitHub</a>
+        <br>
+        <a href="https://github.com/HamzaMehdi12/2/Earthquake_ML_RF_Model" class="btn" data-aos="fade-up">View the source code at my Github here</a>
         <br><br>
-        <a href="timeseries.html" class="btn">Back to TimeSeries Projects</a>
+        <a href="timeseries.html" class="btn" data-aos="fade-up">Back to TimeSeries Projects</a>
       </div>
     </div>
   </section>
@@ -79,5 +51,10 @@
   <footer>
     <p>&copy; 2025 DSAI. All rights reserved.</p>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
