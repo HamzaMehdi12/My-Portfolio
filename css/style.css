@@ -123,6 +123,10 @@ nav ul li a {
 .feature {
   max-width: 250px;
   text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 .feature img {
@@ -136,6 +140,54 @@ nav ul li a {
   font-size: 1.1rem;
   font-weight: 600;
   margin-top: 10px;
+}
+
+/* Services Page Section */
+.services-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.services-section h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  justify-items: center;
+  align-items: center;
+}
+
+.service-item {
+  max-width: 250px;
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.service-item img {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.service-item h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.service-item p {
+  font-size: 0.95rem;
+  margin-top: 10px;
+  color: #666;
 }
 
 /* Projects Section */
@@ -161,6 +213,10 @@ nav ul li a {
 .project {
   max-width: 250px;
   text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 .project img {
@@ -233,8 +289,7 @@ a.btn:hover,
 a.btn-secondary:hover {
   background-color: #004a80;
 }
-/* About Page Buttons */
-
+/* About Page */
 .about {
   padding: 60px 20px;
   text-align: center;
