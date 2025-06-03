@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stardust School Database</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">DSAI</div>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="index.html" class="active">Projects</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="features">
+    <h3 data-aos="fade-down">Stardust School Database</h3>
+    <div class="feature-boxes">
+      <div class="feature" style="max-width:800px; margin:auto;">
+        <img src="../assets/inventory_items/Inventory_Management_System.png" alt="Inventory" style="width:100%; height:auto;" data-aos="zoom-in">
+        <p data-aos="fade-up">This system centers on six core tables—Suppliers, Inventory_Items, Product_List, Transactions, Orders, and Order_Status—plus a staging table (Inventory_Items_Lim) 
+          and several procedures. Suppliers holds each supplier’s Supplier_ID, BULK_ID, a description, and the quantity they can restock. Inventory_Items (keyed by BULK_ID) tracks bulk shipments: 
+          next available Item_ID, unit price, remaining quantity, a link to its supplier, and a simple restock flag.
+        </p>
+
+        <img src="../assets/inventory_items/Product_List.png" alt="Project 2 Inventory" style="width:100%; height:auto;" data-aos="fade-right" />
+        <br>
+        <img src="../assets/inventoty_items/Suppliers.png" alt="Project 2 Suppliers" style="width:100%; height:auto;" data-aos="fade-left" />
+        <br>
+        <img src="../assets/inventoty_items/Inventory_Items.png" alt="Project 2 Inventory" style="width:100%; height:auto;" data-aos="fade-left" />
+        <br>
+        <p data-aos="fade-up">A recursive CTE unrolls each bulk’s quantity into individual units, storing them in Product_List (keyed by Item_ID). Each product row carries its own description, 
+          price, and an expiry date determined by its Item_ID range. As a result, Product_List always reflects the current set of items ready to sell, while maintaining a reference back to the 
+          bulk via BULK_ID.</p>
+        <img src="../assets/inventoty_items/Order_Status.png" alt="Project 2 Order_Status" style="width:100%; height:auto;" data-aos="fade-left" />
+        <br>
+        <img src="../assets/inventoty_items/Orders.png" alt="Project 2 Orders" style="width:100%; height:auto;" data-aos="fade-left" />
+        <br>
+
+        <p data-aos="fade-up">When a sale occurs, Make_Transaction—given an Item_ID, new trans_ID, Order_ID, Status_ID, Dispatch_ID, and initial status text—performs these steps inside one 
+          transaction: insert into Transactions (capturing Item_ID and price), add an Orders row using the transaction’s timestamp, decrement that bulk’s quantity (and advance its “next” Item_ID) 
+          in Inventory_Items, remove the sold unit from Product_List, and call Dispatch to insert into Order_Status (recording dispatch ID and status).</p>
+        <br>
+        <p data-aos="fade-up">To prevent stockouts, Update_Inventory scans for any bulk with fewer than five units. If found, it loops through each low-stock supplier and calls Refil, which adds back 
+          the supplier’s full stock into Inventory_Items, truncates/repopulates Inventory_Items_Lim, reruns the unrolling CTE into a temp table, and re-inserts units into Product_List, setting their new 
+          expiry dates.</p>
+        <br>
+        <p data-aos="fade-up">Finally, Update_Order_Status updates an existing order’s Status and Dispatch_ID in Order_Status, and a small helper procedure, Continue_, returns “Starting adding Transaction,” 
+          “No transaction,” or “Invalid Input” based on a simple yes/no input. Together, these pieces automate bulk-to-unit conversion, sales transactions, restocking, and order tracking.</p>
+        <br>
+        
+        <ul style="text-align:left; margin-top:20px;" data-aos="fade-up">
+          <li><b>Tables & Structure:</b> Six core tables—Suppliers, Inventory_Items, Product_List, Transactions, Orders, and Order_Status—plus a staging table (Inventory_Items_Lim) support suppliers, bulk tracking, and item sales.</li>
+          <li><b>Unrolling Bulk Stock:</b>A recursive CTE expands each bulk’s remaining quantity into individual Item_ID rows in Product_List, carrying description, price, and an expiry date by ID range.</li>
+          <li><b>Make_Transaction Workflow:</b>Inserts a Transactions row, creates an Orders entry with its timestamp, decrements bulk quantity in Inventory_Items (advancing the next Item_ID), removes the sold unit from Product_List, and calls Dispatch to add an Order_Status record.</li>
+          <li><b>Restocking Logic:</b>Update_Inventory finds bulks with fewer than five units, loops through those suppliers calling Refil, which replenishes bulk quantity, rebuilds the staging table, reruns the unrolling CTE, and reinserts new units into Product_List with updated expiry dates.</li>
+          <li><b>Order Status & Helpers:</b> Update_Order_Status updates an order’s Status and Dispatch_ID in Order_Status, while Continue_ simply returns a “yes/no”-based message (“Starting adding Transaction,” “No transaction,” or “Invalid Input”).</l>
+        </ul>
+        <br>
+        <a href="https://github.com/HamzaMehdi12/Inventory-Management-System/tree/main" class="btn" data-aos="fade-up">View the source code at my Github here!:</a>
+        <br><br>
+        <a href="mysql.html" class="btn" data-aos="fade-up">Back to MYSQL Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 DSAI. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+</html>
