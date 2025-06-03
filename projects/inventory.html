@@ -33,16 +33,16 @@
 
         <img src="../assets/inventory_items/Product_List.png" alt="Project 2 Inventory" style="width:100%; height:auto;" data-aos="fade-right" />
         <br>
-        <img src="../assets/inventoty_items/Suppliers.png" alt="Project 2 Suppliers" style="width:100%; height:auto;" data-aos="fade-left" />
+        <img src="../assets/inventory_items/Suppliers.png" alt="Project 2 Suppliers" style="width:100%; height:auto;" data-aos="fade-left" />
         <br>
-        <img src="../assets/inventoty_items/Inventory_Items.png" alt="Project 2 Inventory" style="width:100%; height:auto;" data-aos="fade-left" />
+        <img src="../assets/inventory_items/Inventory_Items.png" alt="Project 2 Inventory" style="width:100%; height:auto;" data-aos="fade-left" />
         <br>
         <p data-aos="fade-up">A recursive CTE unrolls each bulk’s quantity into individual units, storing them in Product_List (keyed by Item_ID). Each product row carries its own description, 
           price, and an expiry date determined by its Item_ID range. As a result, Product_List always reflects the current set of items ready to sell, while maintaining a reference back to the 
           bulk via BULK_ID.</p>
-        <img src="../assets/inventoty_items/Order_Status.png" alt="Project 2 Order_Status" style="width:100%; height:auto;" data-aos="fade-left" />
+        <img src="../assets/inventory_items/Order_Status.png" alt="Project 2 Order_Status" style="width:100%; height:auto;" data-aos="fade-left" />
         <br>
-        <img src="../assets/inventoty_items/Orders.png" alt="Project 2 Orders" style="width:100%; height:auto;" data-aos="fade-left" />
+        <img src="../assets/inventory_items/Orders.png" alt="Project 2 Orders" style="width:100%; height:auto;" data-aos="fade-left" />
         <br>
 
         <p data-aos="fade-up">When a sale occurs, Make_Transaction—given an Item_ID, new trans_ID, Order_ID, Status_ID, Dispatch_ID, and initial status text—performs these steps inside one 
