@@ -17,6 +17,13 @@ a {
   color: inherit;
 }
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 img {
   max-width: 100%;
   display: block;
