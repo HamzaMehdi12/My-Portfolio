@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Covid19 Forecasting Prediction Model</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">DSAI</div>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="index.html" class="active">Projects</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="features" data-aos="fade-up">
+    <h3>Covid19 Forecasting Prediction Model</h3>
+    <div class="feature-boxes">
+      <div class="feature" style="max-width:800px; margin:auto;">
+        <img src="../assets/covid19/AriMAX Train vs Test Forecast.png" alt="Cov19" style="width:100%; height:auto;" data-aos="zoom-in">
+        <p data-aos="fade-right">
+          This codebase implements an ARIMAX modeling pipeline for COVID-19 case forecasting across four modular components. The dataset processing (dataset.py) handles temporal 
+          COVID-19 statistics through datetime conversion, feature engineering (lag features, day/month indicators), and preprocessing pipelines featuring Robust Scaling and mean imputation. 
+          It maintains temporal integrity during train/test splits (80/20) while generating visualization plots of case trends.
+        </p>
+
+        <img src="../assets/covid19/Project Flow.png" alt="Flowchart" style="width:100%; height:auto;" data-aos="zoom-in">
+        <p data-aos="fade-left">
+          The model component (model.py) automates ARIMA parameter selection using pmdarima's auto_arima and fits an ARIMAX model with exogenous variables. Trained models are persisted via 
+          joblib serialization. The training orchestration (train.py) executes the core workflow: data loading → preprocessing → model training → forecast generation with confidence intervals.
+          The evaluation module (evaluate.py) calculates regression metrics (MSE, MAE), compares forecasted versus actual values visually, and plots confidence bands around predictions.
+        </p>
+
+        <img src="../assets/covid19/Daily_Old_New_Deaths_Recovered_And_Total_Cases.png" alt="Daily" style="width:100%; height:auto;" data-aos="zoom-in">
+        <p data-aos="fade-up">
+          The system focuses on forecasting daily new COVID-19 cases using time-series techniques while maintaining temporal relationships through strict datetime indexing. 
+          It features automated model configuration via auto_arima, integrated visual diagnostics at multiple stages, and robust preprocessing pipelines. The implementation handles exogenous 
+          variables through ARIMAX and provides confidence interval estimates for forecasts. The modular design separates concerns while maintaining interoperability between data processing, 
+          modeling, and evaluation components.
+        </p>
+
+        <img src="../assets/covid19/Results.png" alt="Results" style="width:100%; height:auto;" data-aos="zoom-in">
+
+        <p data-aos="fade-up">In Conclusion:</p>
+        <ul style="text-align:left; margin-top:20px;" data-aos="fade-up">
+          <li>Dataset Processing: Handles COVID-19 time-series data with datetime conversion, lag features, and Robust Scaling.</li>
+          <li>ARIMAX Modeling: Automates parameter selection via auto_arima and supports exogenous variables.</li>
+          <li>Training Orchestration: Executes end-to-end workflow from data loading to forecasting.</li>
+          <li>Evaluation: Calculates MSE/MAE metrics and generates forecast vs actual visualizations with confidence bands.</li>
+          <li>Key Feature: Maintains temporal integrity through strict datetime indexing throughout the pipeline.</li>
+          <li>Output: Forecasts daily new COVID-19 cases with confidence interval estimates.</li>
+        </ul>
+
+        <br>
+        <a href="https://github.com/HamzaMehdi12/Covid_19-Prediction-Model-using-ARIMAX/blob/main/README.md" class="btn" data-aos="fade-up">View the source code at my Github here</a>
+        <br><br>
+        <a href="timeseries.html" class="btn" data-aos="fade-up">Back to TimeSeries Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 DSAI. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
