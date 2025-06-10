@@ -32,7 +32,7 @@
           It maintains temporal integrity during train/test splits (80/20) while generating visualization plots of case trends.
         </p>
 
-        <img src="../assets/covid19/Project Flow.png" alt="Flowchart" style="width:25%; height:auto;" data-aos="zoom-in">
+        <img src="../assets/covid19/Project Flow.png" alt="Flowchart" style="width:25%; height:auto;" data-aos="zoom-in" class = "center">
         <p data-aos="fade-left">
           The model component (model.py) automates ARIMA parameter selection using pmdarima's auto_arima and fits an ARIMAX model with exogenous variables. Trained models are persisted via 
           joblib serialization. The training orchestration (train.py) executes the core workflow: data loading → preprocessing → model training → forecast generation with confidence intervals.
