@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kmeans Clustering Model</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">DSAI</div>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="index.html" class="active">Projects</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <section class="features">
+    <h3 data-aos="fade-down">Kmeans Clustering</h3>
+    <div class="feature-boxes">
+      <div class="feature" style="max-width:800px; margin:auto;">
+        <img src="../assets/customer_segmentation/Kmeans_clustering_pca2d.png" alt="Customer Segmentation" style="width:100%; height:auto;" data-aos="zoom-in">
+        <p data-aos="fade-up">In this project, I developed an end-to-end customer segmentation pipeline using unsupervised machine learning to uncover distinct customer groups from retail transaction 
+          data. The process began with comprehensive data preprocessing: irrelevant columns were removed, missing values handled, and time-based features (hour, minute) engineered from invoice 
+          timestamps. Aggregated metrics such as total quantity and unit price per customer were computed to derive meaningful behavioral insights. </p>
+        <br>
+        <img src="../assets/customer_segmentation/Test_Cluster_PCA3D.png" alt="Test_Clusters" style="width:100%; height:auto;" data-aos="fade-right" />
+        <br>
+        <img src="../assets/customer_segmentation/AutoSelect_Best_K.png" alt="Best K" style="width:100%; height:auto;" data-aos="fade-left" />
+        <br>
+        <p data-aos="fade-up">I applied RobustScaler to normalize numerical features and ensure model robustness against outliers. To determine the optimal number of clusters, I used the 
+          silhouette score across a range of K values (2–10), selecting the value that maximized clustering effectiveness. Dimensionality reduction via PCA allowed for intuitive 2D and 3D 
+          visualization of clusters and centroids, offering a clear view into customer segmentation structure.</p>
+        <br>
+        <img src="../assets/customer_segmentation/Adjusted_Rand_Score.png" alt="Adjusted Rand Score" style="width:100%; height:auto;" data-aos="fade-left" />
+        <br>
+        <img src="../assets/customer_segmentation/Normalized_Mutual_Info.png" alt="Normalized Mutual Info" style="width:100%; height:auto;" data-aos="fade-left" />
+        <br>
+        <p data-aos="fade-up">The final model leveraged the K-Means algorithm for clustering, followed by evaluation using Adjusted Rand Index (ARI) and Normalized Mutual Information (NMI) to 
+          compare clustering results with actual behavioral metrics. While the evaluation involved continuous targets, it still provided insights into clustering performance. This project 
+          highlights my ability to design scalable machine learning workflows, perform insightful data transformations, and communicate results through visualizations.</p>
+        <br>
+        
+        <ul style="text-align:left; margin-top:20px;" data-aos="fade-up">
+          <li>Built an end-to-end customer segmentation pipeline using unsupervised learning on retail transaction data.</li>
+          <li>Engineered time-based features (hour, minute) from invoice timestamps and aggregated metrics by customer ID.</li>
+          <li>Applied data cleaning, normalization (RobustScaler), and dimensionality reduction using PCA.</li>
+          <li>Determined optimal number of clusters using silhouette score and implemented K-Means for clustering.</li>
+          <li>Visualized cluster assignments in 2D and 3D to identify meaningful customer segments.</l>
+          <li>Evaluated clustering quality using Adjusted Rand Index (ARI) and Normalized Mutual Information (NMI).</li>
+          <li>Demonstrated practical application of clustering techniques to support customer behavior analysis.</li>
+        </ul>
+        <br>
+        <a href="https://github.com/HamzaMehdi12/Customer-Segmentation/blob/main/README.md" class="btn" data-aos="fade-up">View the source code at my Github here!:</a>
+        <br><br>
+        <a href="clusters.html" class="btn" data-aos="fade-up">Back to Clustering Projects.</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 DSAI. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+</html>
